@@ -1,0 +1,37 @@
+﻿using Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
+using Intelligent.Factory.Management.Domain.SeedWork;
+using Microsoft.EntityFrameworkCore;
+
+namespace Intelligent.Factory.Management.Infrastructure.Repositories;
+
+public class ClientRepository : IClientRepository
+{
+    private readonly IntelligentFactoryManagementContext _context;
+
+    public ClientRepository(IntelligentFactoryManagementContext context)
+    {
+        _context = context;
+    }
+
+    public IUnitOfWork UnitOfWork => _context;
+
+    public Client Add(Client client)
+    {
+        return _context.Clients.Add(client).Entity;
+    }
+
+    public Client Update(Client client)
+    {
+        return _context.Clients.Update(client).Entity;
+    }
+
+    public async Task<Client> FindByIdAsync(string id)
+    {
+        var client = await _context.Clients.Include(b => b.ClientAgent)
+            .Include(b=>b.Address)
+            .Include(b=>b.Bank)
+            .Where(b => b.Id == int.Parse(id))
+            .SingleOrDefaultAsync();
+        return client;
+    }
+}
