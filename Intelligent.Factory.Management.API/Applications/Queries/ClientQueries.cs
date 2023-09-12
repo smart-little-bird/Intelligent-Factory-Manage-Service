@@ -13,6 +13,7 @@ public class ClientQueries:IClientQueries
     
     public Task<Client> GetClientAsync(int id)
     {
+        
         throw new NotImplementedException();
     }
 }

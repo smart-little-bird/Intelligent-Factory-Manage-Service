@@ -21,7 +21,7 @@ public class ClientEntityTypeConfiguration : IEntityTypeConfiguration<Client>
         builder.Property(b => b.ClientType).IsRequired();
 
         builder.HasOne(b => b.ClientAgent)
-            .WithOne()
+            .WithMany()
             .HasForeignKey("ClientAgentId")
             .OnDelete(DeleteBehavior.Cascade);
 
@@ -37,8 +37,8 @@ public class ClientEntityTypeConfiguration : IEntityTypeConfiguration<Client>
         builder
             .OwnsOne(o => o.Bank, a =>
             {
-                a.Property(p => p.BankTitle).HasColumnName("Street");
-                a.Property(p => p.BankAccount).HasColumnName("ZipCode");
+                a.Property(p => p.BankTitle).HasColumnName("BankTitle");
+                a.Property(p => p.BankAccount).HasColumnName("BankAccount");
             });
 
         builder.Property(b => b.BillingTelephone)

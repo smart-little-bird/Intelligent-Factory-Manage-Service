@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // DI dbContext
 builder.Services.AddDbContext<IntelligentFactoryManagementContext>(options =>
     {
-        options.UseSqlServer(builder.Configuration["ConnectionString"],
+        options.UseSqlServer(builder.Configuration.GetConnectionString("db"),
             sqlServerOptionsAction: sqlOptions =>
             {
                 sqlOptions.MigrationsAssembly(typeof(Program).GetTypeInfo().Assembly.GetName().Name);
@@ -22,10 +22,11 @@ builder.Services.AddDbContext<IntelligentFactoryManagementContext>(options =>
 
 //DI autofac
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+
 builder.Host.ConfigureContainer<ContainerBuilder>(container =>
 {
     container.RegisterModule(new MediatorModule());
-    container.RegisterModule(new ApplicationModule(builder.Configuration["ConnectionString"]));
+    container.RegisterModule(new ApplicationModule(builder.Configuration.GetConnectionString("db")));
 });
 
 // Add services to the container.

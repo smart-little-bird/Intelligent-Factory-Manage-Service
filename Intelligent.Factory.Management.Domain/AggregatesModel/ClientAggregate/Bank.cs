@@ -4,7 +4,7 @@ namespace Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
 
 public class Bank : ValueObject
 {
-    protected Bank()
+    public Bank()
     {
     }
 

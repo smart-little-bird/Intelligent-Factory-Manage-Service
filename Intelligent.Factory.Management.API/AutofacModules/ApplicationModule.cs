@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+﻿
 using Autofac;
 using Intelligent.Factory.Management.API.Applications.Queries;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
@@ -18,9 +18,8 @@ public class ApplicationModule
 
     protected override void Load(ContainerBuilder builder)
     {
-
         builder.Register(c => new ClientQueries(QueriesConnectionString))
-            .As<ClientQueries>()
+            .As<IClientQueries>()
             .InstancePerLifetimeScope();
 
         builder.RegisterType<ClientRepository>()

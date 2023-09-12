@@ -31,7 +31,7 @@ public class ClientController : CommonControllerBase
     {
         var result = await _mediator.Send(createClientCommand);
         _logger.LogInformation($"create the client succeed: id{result}");
-        return Succeed<int>(result, StatusCodes.Status201Created);
+        return Succeed(result, StatusCodes.Status201Created);
     }
     
     // [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]

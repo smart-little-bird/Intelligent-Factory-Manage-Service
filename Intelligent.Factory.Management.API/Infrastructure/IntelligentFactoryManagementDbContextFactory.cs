@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace Intelligent.Factory.Management.API.Infrastructure;
 
-public class ProductDbContextFactory: IDesignTimeDbContextFactory<IntelligentFactoryManagementContext>
+public class ProductDbContextFactory : IDesignTimeDbContextFactory<IntelligentFactoryManagementContext>
 {
     public IntelligentFactoryManagementContext CreateDbContext(string[] args)
     {
@@ -17,9 +17,8 @@ public class ProductDbContextFactory: IDesignTimeDbContextFactory<IntelligentFac
         var optionsBuilder = new DbContextOptionsBuilder<IntelligentFactoryManagementContext>();
 
         optionsBuilder.UseSqlServer(config.GetConnectionString("db"),
-            sqlServerOptionsAction: o => o.MigrationsAssembly("ProductManage.API"));
+            sqlServerOptionsAction: builder => builder.MigrationsAssembly(typeof(Program).Assembly.FullName));
 
         return new IntelligentFactoryManagementContext(optionsBuilder.Options);
-
     }
 }
