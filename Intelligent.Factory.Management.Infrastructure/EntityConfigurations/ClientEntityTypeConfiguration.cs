@@ -42,19 +42,23 @@ public class ClientEntityTypeConfiguration : IEntityTypeConfiguration<Client>
             });
 
         builder.Property(b => b.BillingTelephone)
-            .UsePropertyAccessMode(PropertyAccessMode.Field);
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .IsRequired();
 
         builder.Property(x => x.TFN)
-            .UsePropertyAccessMode(PropertyAccessMode.Field);
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .IsRequired();
 
         builder.Property(x => x.ContactNumber)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
         
         builder.Property(x => x.Email)
-            .UsePropertyAccessMode(PropertyAccessMode.Field);
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .IsRequired();
         
         builder.Property(x => x.Fax)
-            .UsePropertyAccessMode(PropertyAccessMode.Field);
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .IsRequired();
     }
 }

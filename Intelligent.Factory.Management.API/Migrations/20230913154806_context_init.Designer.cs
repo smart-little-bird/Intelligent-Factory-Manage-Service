@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Intelligent.Factory.Management.API.Migrations
 {
     [DbContext(typeof(IntelligentFactoryManagementContext))]
-    [Migration("20230912142825_init_context")]
-    partial class init_context
+    [Migration("20230913154806_context_init")]
+    partial class context_init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -87,7 +87,7 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ClientAgent");
+                    b.ToTable("clientAgent", "IntelligentFactoryManagement");
                 });
 
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate.Client", b =>

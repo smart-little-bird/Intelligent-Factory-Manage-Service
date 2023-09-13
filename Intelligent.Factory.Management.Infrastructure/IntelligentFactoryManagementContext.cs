@@ -35,7 +35,7 @@ public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new ClientEntityTypeConfiguration());
-
+        modelBuilder.ApplyConfiguration(new ClientAgentEntityTypeConfiguration());
     }
 
     public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))

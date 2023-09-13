@@ -67,7 +67,7 @@ public class Client : Entity, IAggregateRoot
 
     public void InitEnterpriseClient(string name, string phoneNumber )
     {
-        ClientAgent = new ClientAgent(name, phoneNumber);
+        this.ClientAgent = new ClientAgent(name, phoneNumber);
     }
     
     public void InitPersonageClient()

@@ -85,7 +85,7 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("ClientAgent");
+                    b.ToTable("clientAgent", "IntelligentFactoryManagement");
                 });
 
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate.Client", b =>

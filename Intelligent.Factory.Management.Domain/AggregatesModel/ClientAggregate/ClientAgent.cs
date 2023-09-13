@@ -4,7 +4,11 @@ namespace Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
 
 public class ClientAgent:Entity
 {
-    public ClientAgent(string name, string phoneNumber)
+    public ClientAgent()
+    {
+    }
+
+    public ClientAgent(string name, string phoneNumber):this()
     {
         Name = name;
         PhoneNumber = phoneNumber;

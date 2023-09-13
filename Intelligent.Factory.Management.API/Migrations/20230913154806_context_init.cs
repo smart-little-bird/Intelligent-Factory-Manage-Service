@@ -4,7 +4,7 @@
 
 namespace Intelligent.Factory.Management.API.Migrations
 {
-    public partial class init_context : Migration
+    public partial class context_init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,7 +12,8 @@ namespace Intelligent.Factory.Management.API.Migrations
                 name: "IntelligentFactoryManagement");
 
             migrationBuilder.CreateTable(
-                name: "ClientAgent",
+                name: "clientAgent",
+                schema: "IntelligentFactoryManagement",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -22,7 +23,7 @@ namespace Intelligent.Factory.Management.API.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ClientAgent", x => x.Id);
+                    table.PrimaryKey("PK_clientAgent", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -51,9 +52,10 @@ namespace Intelligent.Factory.Management.API.Migrations
                 {
                     table.PrimaryKey("PK_client", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_client_ClientAgent_ClientAgentId",
+                        name: "FK_client_clientAgent_ClientAgentId",
                         column: x => x.ClientAgentId,
-                        principalTable: "ClientAgent",
+                        principalSchema: "IntelligentFactoryManagement",
+                        principalTable: "clientAgent",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -72,7 +74,8 @@ namespace Intelligent.Factory.Management.API.Migrations
                 schema: "IntelligentFactoryManagement");
 
             migrationBuilder.DropTable(
-                name: "ClientAgent");
+                name: "clientAgent",
+                schema: "IntelligentFactoryManagement");
         }
     }
 }
