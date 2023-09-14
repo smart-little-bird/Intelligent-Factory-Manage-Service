@@ -8,5 +8,7 @@ public interface IClientRepository: IRepository<Client>
     
     Client Update(Client client);
 
+    Task DeleteAsync(int id);
+
     Task<Client> FindByIdAsync(string id);
 }

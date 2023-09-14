@@ -1,5 +1,6 @@
 ﻿using Intelligent.Factory.Management.API.Applications.Commands;
 using Intelligent.Factory.Management.API.Applications.Queries;
+using Intelligent.Factory.Management.API.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 namespace Intelligent.Factory.Management.API.Controllers;
@@ -34,35 +35,24 @@ public class ClientController : CommonControllerBase
         return Succeed(result, StatusCodes.Status201Created);
     }
     
-    // [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
-    // [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    // [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    // [HttpPut]
-    // public async Task<IActionResult> UpdateAsync([FromBody] UpdateProductCommand updateProductCommand)
-    // {
-    //     var result = await _mediator.Send(updateProductCommand);
-    //     _logger.LogInformation($"update the product succeed: id{result}");
-    //     return Succeed(result, StatusCodes.Status200OK);
-    // }
-    //
-    // [ProducesResponseType(typeof(ProductPageListDto), StatusCodes.Status200OK)]
-    // [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    // [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    // [HttpGet("")]
-    // public async Task<IActionResult> GetListAsync([FromQuery] Page page)
-    // {
-    //     var result = await _productQueries.GetList(page.PageIndex,page.PageSize);
-    //     return Succeed(result, StatusCodes.Status200OK);
-    // }
-    //
-    // [ProducesResponseType(typeof(ProductDetailDto), StatusCodes.Status200OK)]
-    // [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    // [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    // [HttpGet("{id:int}")]
-    // public async Task<IActionResult> GetAsync([FromRoute] int id)
-    // {
-    //     var result = await _mediator.Send(new QueryProductDetailCommand(id));
-    //     return Succeed(result, StatusCodes.Status200OK);
-    // }
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> DeleteAsync([FromRoute] int id)
+    {
+        await _mediator.Send(new DeleteClientCommand {Id = id});
+        return Succeed(StatusCodes.Status200OK);
+    }
+
+    [ProducesResponseType(typeof(ClientListDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpGet("")]
+    public Task<IActionResult> GetListAsync([FromQuery] Page page)
+    {
+        var result =  _clientQueries.GetClientListAsync(page.PageIndex,page.PageSize);
+        return Task.FromResult(Succeed(result, StatusCodes.Status200OK));
+    }
 
 }

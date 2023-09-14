@@ -25,11 +25,18 @@ public class ClientRepository : IClientRepository
         return _context.Clients.Update(client).Entity;
     }
 
+    public async Task DeleteAsync(int id)
+    {
+        _context.Clients.Remove(
+            (await _context.Clients.SingleOrDefaultAsync(t => t.Id == id))!
+        );
+    }
+
     public async Task<Client> FindByIdAsync(string id)
     {
         var client = await _context.Clients.Include(b => b.ClientAgent)
-            .Include(b=>b.Address)
-            .Include(b=>b.Bank)
+            .Include(b => b.Address)
+            .Include(b => b.Bank)
             .Where(b => b.Id == int.Parse(id))
             .SingleOrDefaultAsync();
         return client;
