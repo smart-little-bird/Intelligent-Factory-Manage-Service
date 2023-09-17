@@ -54,22 +54,22 @@ public class Client : Entity, IAggregateRoot
     /// 传真
     /// </summary>
     public string Fax { get; set; }
-    
+
     private Client()
     {
     }
-    
-    public Client(ClientType clientType,string name) : this()
+
+    public Client(ClientType clientType, string name) : this()
     {
         ClientType = clientType;
         Name = name;
     }
 
-    public void InitEnterpriseClient(string name, string phoneNumber )
+    public void InitEnterpriseClient(string name, string phoneNumber)
     {
         this.ClientAgent = new ClientAgent(name, phoneNumber);
     }
-    
+
     public void InitPersonageClient()
     {
         if (string.IsNullOrEmpty(ContactNumber))
@@ -78,7 +78,7 @@ public class Client : Entity, IAggregateRoot
         }
         ClientAgent = new ClientAgent(Name, ContactNumber);
     }
-    
+
     public void AddAddress(string street, string city, string province, string zipcode)
     {
         Address = new Address(street, city, province, zipcode);
@@ -97,5 +97,5 @@ public class Client : Entity, IAggregateRoot
         Email = email;
         Fax = fax;
     }
-    
+
 }

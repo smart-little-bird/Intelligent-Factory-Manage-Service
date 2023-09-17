@@ -10,7 +10,7 @@ namespace Intelligent.Factory.Management.Infrastructure;
 public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
 {
     public const string DEFAULT_SCHEMA = "IntelligentFactoryManagement";
-    
+
     public DbSet<Client> Clients { get; set; }
 
     private readonly IMediator? _mediator;

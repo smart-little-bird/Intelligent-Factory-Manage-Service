@@ -25,12 +25,12 @@ public class ApplicationModule
         builder.RegisterType<ClientRepository>()
             .As<IClientRepository>()
             .InstancePerLifetimeScope();
-        
+
         // builder.RegisterType<RequestManager>()
         //     .As<IRequestManager>()
         //     .InstancePerLifetimeScope();
         //
-        
+
         // builder.RegisterAssemblyTypes(typeof(CreateOrderCommandHandler).GetTypeInfo().Assembly)
         //     .AsClosedTypesOf(typeof(IIntegrationEventHandler<>));
 

@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Intelligent.Factory.Management.API.Applications.Commands;
 
-public class DeleteClientCommand:IRequest
+public class DeleteClientCommand : IRequest
 {
     public int Id { get; set; }
 }
@@ -12,7 +12,7 @@ public class DeleteClientCommandHandler : IRequestHandler<DeleteClientCommand>
 {
     private readonly IClientRepository _clientRepository;
     private ILogger<DeleteClientCommandHandler> _logger;
-    
+
     public DeleteClientCommandHandler(IClientRepository clientRepository, ILogger<DeleteClientCommandHandler> logger)
     {
         _clientRepository = clientRepository;

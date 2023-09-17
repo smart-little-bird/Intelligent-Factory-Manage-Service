@@ -8,7 +8,7 @@ public class Bank : ValueObject
     {
     }
 
-    public Bank(string bankTitle, string bankAccount):this()
+    public Bank(string bankTitle, string bankAccount) : this()
     {
         BankTitle = bankTitle;
         BankAccount = bankAccount;

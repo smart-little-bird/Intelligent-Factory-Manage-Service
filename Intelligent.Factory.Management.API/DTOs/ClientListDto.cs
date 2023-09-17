@@ -2,6 +2,22 @@ using Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
 
 namespace Intelligent.Factory.Management.API.DTOs;
 
+public class ClientListPageDto
+{
+    public IAsyncEnumerable<ClientListDto> ClientListDtos { get; set; }
+
+    public PageDto Page { get; set; }
+
+    public record PageDto
+    {
+        public int PageSize { get; set; }
+
+        public int PageIndex { get; set; }
+
+        public int Total { get; set; }
+    }
+}
+
 public class ClientListDto
 {
     public int Id { get; set; }
@@ -20,21 +36,21 @@ public class ClientListDto
     /// 街道
     /// </summary>
     public string Street { get; set; }
-    
+
     /// <summary>
     /// 城市
     /// </summary>
-    public  string City { get;set; }
-    
+    public string City { get; set; }
+
     /// <summary>
     /// 省份
     /// </summary>
-    public  string Province { get; set;}
-    
+    public string Province { get; set; }
+
     /// <summary>
     /// 编码
     /// </summary>
-    public  string ZipCode { get;set; }
+    public string ZipCode { get; set; }
 
     /// <summary>
     /// 委托代理人
@@ -76,21 +92,10 @@ public class ClientListDto
     /// </summary>
     public string Fax { get; set; }
 
-    public PageDto Page { get; set; }
-
     public record ClientListAgentDto
     {
         public string Name { get; set; }
-    
+
         public string PhoneNumber { get; set; }
-    }
-
-    public record PageDto
-    {
-        public int PageSize { get; set; }
-
-        public int PageIndex { get; set; }
-
-        public int Total { get; set; }
     }
 }

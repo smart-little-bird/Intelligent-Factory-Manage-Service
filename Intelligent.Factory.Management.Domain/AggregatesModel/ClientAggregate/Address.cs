@@ -5,16 +5,16 @@ namespace Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
 public class Address : ValueObject
 {
     public string Street { get; }
-    public  string City { get; }
-    public  string Province { get; }
-    public  string ZipCode { get; }
+    public string City { get; }
+    public string Province { get; }
+    public string ZipCode { get; }
 
     private Address()
     {
-        
+
     }
 
-    public Address(string street, string city, string province, string zipcode):this()
+    public Address(string street, string city, string province, string zipcode) : this()
     {
         Street = street;
         City = city;

@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Intelligent.Factory.Management.API.Applications.Commands;
 
-public class CreateClientCommand  : IRequest<int>
+public class CreateClientCommand : IRequest<int>
 {
     /// <summary>
     /// 客户类型 0企业  1个人  2其他
@@ -19,21 +19,21 @@ public class CreateClientCommand  : IRequest<int>
     /// 街道
     /// </summary>
     public string Street { get; set; }
-    
+
     /// <summary>
     /// 城市
     /// </summary>
-    public  string City { get;set; }
-    
+    public string City { get; set; }
+
     /// <summary>
     /// 省份
     /// </summary>
-    public  string Province { get; set;}
-    
+    public string Province { get; set; }
+
     /// <summary>
     /// 编码
     /// </summary>
-    public  string ZipCode { get;set; }
+    public string ZipCode { get; set; }
 
     /// <summary>
     /// 委托代理人
@@ -78,7 +78,7 @@ public class CreateClientCommand  : IRequest<int>
     public record ClientAgentDto
     {
         public string Name { get; set; }
-    
+
         public string PhoneNumber { get; set; }
     }
 }
@@ -94,15 +94,15 @@ public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, i
 
     public async Task<int> Handle(CreateClientCommand request, CancellationToken cancellationToken)
     {
-        var client = new Client(request.ClientType,request.Name);
-        client.AddContactInfo(request.TFN,request.BillingTelephone,request.ContactNumber,request.Email,request.Fax);
-        client.AddAddress(request.Street,request.City,request.Province,request.ZipCode);
-        client.AddBank(request.BankTitle,request.BankAccount);
-        
+        var client = new Client(request.ClientType, request.Name);
+        client.AddContactInfo(request.TFN, request.BillingTelephone, request.ContactNumber, request.Email, request.Fax);
+        client.AddAddress(request.Street, request.City, request.Province, request.ZipCode);
+        client.AddBank(request.BankTitle, request.BankAccount);
+
         switch (client.ClientType)
         {
             case ClientType.Enterprise:
-                client.InitEnterpriseClient(request.ClientAgent.Name,request.ClientAgent.PhoneNumber);
+                client.InitEnterpriseClient(request.ClientAgent.Name, request.ClientAgent.PhoneNumber);
                 break;
             case ClientType.Personage:
                 client.InitPersonageClient();

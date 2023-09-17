@@ -5,7 +5,6 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 namespace Intelligent.Factory.Management.API.Controllers;
 
-
 [ApiController]
 [Produces("application/json")]
 [Route("[controller]")]
@@ -34,25 +33,45 @@ public class ClientController : CommonControllerBase
         _logger.LogInformation($"create the client succeed: id{result}");
         return Succeed(result, StatusCodes.Status201Created);
     }
-    
+
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [HttpDelete("{id:int}")]
     public async Task<IActionResult> DeleteAsync([FromRoute] int id)
     {
-        await _mediator.Send(new DeleteClientCommand {Id = id});
+        await _mediator.Send(new DeleteClientCommand { Id = id });
         return Succeed(StatusCodes.Status200OK);
     }
 
-    [ProducesResponseType(typeof(ClientListDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ClientListPageDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [HttpGet("")]
-    public Task<IActionResult> GetListAsync([FromQuery] Page page)
+    public async Task<IActionResult> GetListAsync([FromQuery] Page page)
     {
-        var result =  _clientQueries.GetClientListAsync(page.PageIndex,page.PageSize);
-        return Task.FromResult(Succeed(result, StatusCodes.Status200OK));
+        var result = _clientQueries.GetClientListAsync(page.PageIndex, page.PageSize);
+        var totalAccount = await _clientQueries.GetAccountAsync();
+        var clientListPageDto = new ClientListPageDto
+        {
+            ClientListDtos = result,
+            Page = new ClientListPageDto.PageDto
+            {
+                PageSize = page.PageSize,
+                PageIndex = page.PageIndex,
+                Total = totalAccount
+            }
+        };
+        return Succeed(clientListPageDto, StatusCodes.Status200OK);
     }
 
+    [ProducesResponseType(typeof(IEnumerable<ClientListDto>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpGet("simple")]
+    public Task<IActionResult> GetListAsync()
+    {
+        var result = _clientQueries.GetClientListAsync();
+        return Task.FromResult(Succeed(result, StatusCodes.Status200OK));
+    }
 }

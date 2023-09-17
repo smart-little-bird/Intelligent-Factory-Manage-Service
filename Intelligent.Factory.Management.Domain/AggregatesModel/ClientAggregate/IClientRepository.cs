@@ -2,10 +2,10 @@
 
 namespace Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
 
-public interface IClientRepository: IRepository<Client>
+public interface IClientRepository : IRepository<Client>
 {
     Client Add(Client client);
-    
+
     Client Update(Client client);
 
     Task DeleteAsync(int id);
