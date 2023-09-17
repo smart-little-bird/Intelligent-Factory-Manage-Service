@@ -41,7 +41,7 @@ public class ClientQueries : IClientQueries
         connection.Open();
 
         var result =
-            await connection.QueryAsync<int>(sql: "SELECT COUNT(1) FROM IntelligentFactoryManagement.client");
+            await connection.QueryAsync<int>(sql: $"SELECT COUNT(1) FROM IntelligentFactoryManagement.client");
         return result.First();
     }
 
