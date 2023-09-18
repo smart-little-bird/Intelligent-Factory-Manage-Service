@@ -1,4 +1,4 @@
-# Intelligent-Factory-Manage-Service
+_# Intelligent-Factory-Manage-Service
 
 ## Client Domain
 ### create client request dto
@@ -50,3 +50,24 @@
 |-------------|--------|-------|----------|----------|
 | Name        | string | 代理人姓名 | 是        | 是        |
 | PhoneNumber | string | 代理人电话 | 是        | 是        |
+
+## Product Domain
+### create Product request dto
+| 字段        | 类型       | 备注   | 是否在table显示 | 是否form提交 |
+|-----------|----------|------|-----------|----------|
+| Description | string   | 产品描述 |           |  是       |
+| EntryCriteria | string   | 入级   |           | 是        |
+| ProductItemDtos | [Entity] | 产品明细 |           | 是        |
+
+### create ProductItemDtos request dto
+| 字段        | 类型     | 备注   | 是否在table显示 | 是否form提交 |
+|-----------|--------|------|-----------|----------|
+| ProductType | int    | 产品明细名称 |           |  是       |
+| Name | string | 产品明细名称 |           |  是       |
+| Specifications | string | 规格型号   |           | 是        |
+| Amount | int    | 数量 |           | 是        |
+| UnitPrice | int    | 单价   |           | 是        |
+| Unit | string | 单位 |           | 是        |
+| Material | string | 材料型号 |           | 是        |
+| TechnicalRequirements | string    | 技术要求   |           | 是        |
+| Remark | string | 备注 |           | 是        |

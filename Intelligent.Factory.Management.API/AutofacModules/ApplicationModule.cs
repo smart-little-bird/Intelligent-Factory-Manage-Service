@@ -2,6 +2,7 @@
 using Autofac;
 using Intelligent.Factory.Management.API.Applications.Queries;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
+using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using Intelligent.Factory.Management.Infrastructure.Repositories;
 
 namespace Intelligent.Factory.Management.API.AutofacModules;
@@ -26,10 +27,9 @@ public class ApplicationModule
             .As<IClientRepository>()
             .InstancePerLifetimeScope();
 
-        // builder.RegisterType<RequestManager>()
-        //     .As<IRequestManager>()
-        //     .InstancePerLifetimeScope();
-        //
+        builder.RegisterType<ProductRepository>()
+            .As<IProductRepository>()
+            .InstancePerLifetimeScope();
 
         // builder.RegisterAssemblyTypes(typeof(CreateOrderCommandHandler).GetTypeInfo().Assembly)
         //     .AsClosedTypesOf(typeof(IIntegrationEventHandler<>));

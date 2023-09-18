@@ -9,7 +9,7 @@ public class ProductItem : Entity
         
     }
 
-    public ProductItem(ProductType productType, string name, string specifications, int amount, string unit,
+    public ProductItem(ProductType productType, string name, string specifications, int amount,int unitPrice, string unit,
         string material, string technicalRequirements, string remark):this()
     {
         ProductType = productType;
@@ -17,6 +17,7 @@ public class ProductItem : Entity
         Specifications = specifications;
         Amount = amount;
         Unit = unit;
+        UnitPrice = unitPrice;
         Material = material;
         TechnicalRequirements = technicalRequirements;
         Remark = remark;
@@ -65,10 +66,10 @@ public class ProductItem : Entity
     /// <summary>
     /// 备注
     /// </summary>
-    public string Remark { get; set; }
+    public string Remark { get; private set; }
 
     /// <summary>
-    /// 总价
+    /// 
     /// </summary>
-    public int TotalPrice => Amount * UnitPrice;
+    public int ProductId { get; private set; }
 }
