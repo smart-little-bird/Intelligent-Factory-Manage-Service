@@ -13,7 +13,7 @@ public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
     public const string DEFAULT_SCHEMA = "IntelligentFactoryManagement";
 
     public DbSet<Client> Clients { get; set; }
-    
+
     public DbSet<Product> Products { get; set; }
 
     private readonly IMediator? _mediator;
@@ -39,7 +39,7 @@ public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
     {
         modelBuilder.ApplyConfiguration(new ClientEntityTypeConfiguration());
         modelBuilder.ApplyConfiguration(new ClientAgentEntityTypeConfiguration());
-        
+
         modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
         modelBuilder.ApplyConfiguration(new ProductItemEntityTypeConfiguration());
     }

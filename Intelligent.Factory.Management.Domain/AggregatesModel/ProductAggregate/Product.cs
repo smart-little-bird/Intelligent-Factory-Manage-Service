@@ -32,10 +32,10 @@ public class Product : Entity, IAggregateRoot
     /// <param name="material"></param>
     /// <param name="technicalRequirements"></param>
     /// <param name="remark"></param>
-    public void AddProductItem(ProductType productType, string name, string specifications, int amount,int unitPrice, string unit,
+    public void AddProductItem(ProductType productType, string name, string specifications, int amount, int unitPrice, string unit,
         string material, string technicalRequirements, string remark)
     {
-        _productItems.Add(new ProductItem(productType, name, specifications, amount,unitPrice ,unit, material,
+        _productItems.Add(new ProductItem(productType, name, specifications, amount, unitPrice, unit, material,
             technicalRequirements, remark));
     }
 }

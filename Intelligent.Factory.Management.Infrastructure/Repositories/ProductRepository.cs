@@ -31,4 +31,14 @@ public class ProductRepository : IProductRepository
             (await _context.Products.SingleOrDefaultAsync(t => t.Id == id))!
         );
     }
+
+    public Task<List<Product>> GetListWithPageAsync(int pageIndex, int pageSize)
+    {
+        return _context.Products.Include(t => t.ProductItems).OrderBy(p => p.Id).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToListAsync();
+    }
+
+    public Task<int> GetCount()
+    {
+        return _context.Products.CountAsync();
+    }
 }

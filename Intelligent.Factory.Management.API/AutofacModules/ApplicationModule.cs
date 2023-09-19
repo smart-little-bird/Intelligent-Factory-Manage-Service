@@ -22,9 +22,13 @@ public class ApplicationModule
         builder.Register(c => new ClientQueries(QueriesConnectionString))
             .As<IClientQueries>()
             .InstancePerLifetimeScope();
-
+        
         builder.RegisterType<ClientRepository>()
             .As<IClientRepository>()
+            .InstancePerLifetimeScope();
+
+        builder.RegisterType<ProductQueries>()
+            .As<IProductQueries>()
             .InstancePerLifetimeScope();
 
         builder.RegisterType<ProductRepository>()

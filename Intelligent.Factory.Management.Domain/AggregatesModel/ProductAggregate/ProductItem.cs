@@ -6,11 +6,11 @@ public class ProductItem : Entity
 {
     private ProductItem()
     {
-        
+
     }
 
-    public ProductItem(ProductType productType, string name, string specifications, int amount,int unitPrice, string unit,
-        string material, string technicalRequirements, string remark):this()
+    public ProductItem(ProductType productType, string name, string specifications, int amount, int unitPrice, string unit,
+        string material, string technicalRequirements, string remark) : this()
     {
         ProductType = productType;
         Name = name;
@@ -42,7 +42,7 @@ public class ProductItem : Entity
     /// 数量
     /// </summary>
     public int Amount { get; private set; }
-    
+
     /// <summary>
     /// 单价
     /// </summary>
@@ -62,7 +62,7 @@ public class ProductItem : Entity
     /// 技术要求
     /// </summary>
     public string TechnicalRequirements { get; private set; }
-    
+
     /// <summary>
     /// 备注
     /// </summary>

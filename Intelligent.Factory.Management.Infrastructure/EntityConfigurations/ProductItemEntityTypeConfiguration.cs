@@ -13,21 +13,21 @@ public class ProductItemEntityTypeConfiguration : IEntityTypeConfiguration<Produ
         builder.HasKey(x => x.Id);
 
         builder.Ignore(x => x.DomainEvents);
-        
+
         builder.Property(x => x.Name)
             .HasMaxLength(40)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-        
+
         builder.Property(x => x.ProductType)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-        
+
         builder.Property(x => x.Specifications)
             .HasMaxLength(100)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-        
+
         builder.Property(x => x.TechnicalRequirements)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
@@ -35,7 +35,7 @@ public class ProductItemEntityTypeConfiguration : IEntityTypeConfiguration<Produ
         builder.Property(x => x.Amount)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-        
+
         builder.Property(x => x.UnitPrice)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
@@ -51,7 +51,7 @@ public class ProductItemEntityTypeConfiguration : IEntityTypeConfiguration<Produ
         builder.Property(x => x.Remark)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-        
+
         builder.Property(x => x.ProductId)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();

@@ -22,47 +22,47 @@ public class CreateProductCommand : IRequest<int>
         /// <summary>
         /// 产品类型Id
         /// </summary>
-        public ProductType ProductType { get;  set; }
+        public ProductType ProductType { get; set; }
 
         /// <summary>
         /// 产品明细名称
         /// </summary>
-        public string Name { get;  set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// 规格型号
         /// </summary>
-        public string Specifications { get;  set; }
+        public string Specifications { get; set; }
 
         /// <summary>
         /// 数量
         /// </summary>
-        public int Amount { get;  set; }
-    
+        public int Amount { get; set; }
+
         /// <summary>
         /// 单价
         /// </summary>
-        public int UnitPrice { get;  set; }
+        public int UnitPrice { get; set; }
 
         /// <summary>
         /// 单位
         /// </summary>
-        public string Unit { get;  set; }
+        public string Unit { get; set; }
 
         /// <summary>
         /// 材料型号
         /// </summary>
-        public string Material { get;  set; }
+        public string Material { get; set; }
 
         /// <summary>
         /// 技术要求
         /// </summary>
-        public string TechnicalRequirements { get;  set; }
-    
+        public string TechnicalRequirements { get; set; }
+
         /// <summary>
         /// 备注
         /// </summary>
-        public string Remark { get;  set; }
+        public string Remark { get; set; }
     }
 }
 
@@ -80,9 +80,9 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
         var product = new Product(request.Description, request.EntryCriteria);
         foreach (var productItemDto in request.ProductItemDtos)
         {
-            product.AddProductItem(productItemDto.ProductType,productItemDto.Name,productItemDto.Specifications,productItemDto.Amount,productItemDto.UnitPrice,productItemDto.Unit,productItemDto.Material,productItemDto.TechnicalRequirements,productItemDto.Remark);
+            product.AddProductItem(productItemDto.ProductType, productItemDto.Name, productItemDto.Specifications, productItemDto.Amount, productItemDto.UnitPrice, productItemDto.Unit, productItemDto.Material, productItemDto.TechnicalRequirements, productItemDto.Remark);
         }
-        var result = _productRepository.Add( product);
+        var result = _productRepository.Add(product);
         await _productRepository.UnitOfWork
             .SaveEntitiesAsync(cancellationToken);
         return result.Id;
