@@ -44,4 +44,24 @@ public class ProductController : CommonControllerBase
         var result = await _productQueries.GetProductListAsync(page.PageIndex, page.PageSize);
         return Succeed(result, StatusCodes.Status201Created);
     }
+    
+    [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> UpdateAsync([FromBody] UpdateProductCommand updateProductCommand)
+    {
+        var result = await _mediator.Send(updateProductCommand);
+        return Succeed(result, StatusCodes.Status200OK);
+    }
+    
+    [ProducesResponseType(typeof(ProductPageDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpGet("simple")]
+    public async Task<IActionResult> GetListSimpleAsync()
+    {
+        var result = await _productQueries.GetProductListAsync();
+        return Succeed(result, StatusCodes.Status201Created);
+    }
 }

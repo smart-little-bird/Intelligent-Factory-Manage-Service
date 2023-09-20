@@ -25,7 +25,7 @@ public class ProductListDto
     {
     }
 
-    public ProductListDto(int id, string description, string entryCriteria, IEnumerable<ProductItemDto> productItemDtos):this()
+    public ProductListDto(int id, string description, string entryCriteria, IEnumerable<ProductListItemDto> productItemDtos):this()
     {
         Id = id;
         Description = description;
@@ -39,16 +39,16 @@ public class ProductListDto
 
     public string EntryCriteria { get; set; }
 
-    public IEnumerable<ProductItemDto> ProductItemDtos { get; set; }
+    public IEnumerable<ProductListItemDto> ProductItemDtos { get; set; }
 }
 
-public class ProductItemDto
+public class ProductListItemDto
 {
-    public ProductItemDto()
+    public ProductListItemDto()
     {
     }
 
-    public ProductItemDto(int id, ProductType productType, string name, string specifications, string unit, string material, string technicalRequirements, string remark):this()
+    public ProductListItemDto(int id, ProductType productType, string name, string specifications, string unit, string material, string technicalRequirements, string remark):this()
     {
         Id = id;
         ProductType = productType;

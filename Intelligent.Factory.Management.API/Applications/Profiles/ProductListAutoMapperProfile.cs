@@ -12,7 +12,7 @@ public class ProductListAutoMapperProfile : AutoMapper.Profile
             .ForMember(d => d.Description, o => o.MapFrom(s => s.Description))
             .ForMember(d => d.EntryCriteria, o => o.MapFrom(s => s.EntryCriteria));
 
-        CreateMap<ProductItem, ProductItemDto>()
+        CreateMap<ProductItem, ProductListItemDto>()
             .ForMember(d => d.Id, o => o.MapFrom(s => s.Id))
             .ForMember(d => d.Name, o => o.MapFrom(s => s.Name))
             .ForMember(d => d.TechnicalRequirements, o => o.MapFrom(s => s.TechnicalRequirements))

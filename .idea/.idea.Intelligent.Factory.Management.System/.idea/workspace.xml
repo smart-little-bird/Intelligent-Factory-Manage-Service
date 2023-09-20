@@ -6,22 +6,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d4f95a-acc9-40f4-9722-16aedeba19a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ProductListAutoMapperProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IProductQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/UpdateProductCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductItemDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateProductCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateProductCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/MediatorModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/MediatorModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ProductListAutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ProductListAutoMapperProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IProductQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IProductQueries.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Intelligent.Factory.Management.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Intelligent.Factory.Management.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/IProductRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/ProductItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/ProductItem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/ProductItemEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/ProductItemEntityTypeConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/IntelligentFactoryManagementContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/IntelligentFactoryManagementContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ProductRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

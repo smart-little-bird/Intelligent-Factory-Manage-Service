@@ -19,6 +19,19 @@ public class Product : Entity, IAggregateRoot
 
     public IReadOnlyCollection<ProductItem> ProductItems => _productItems;
 
+    public void UpdateProduct(string description, string entryCriteria)
+    {
+        Description = description;
+        EntryCriteria = entryCriteria;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void RemoveProductItems()
+    {
+        _productItems.Clear();
+    }
 
     /// <summary>
     /// 

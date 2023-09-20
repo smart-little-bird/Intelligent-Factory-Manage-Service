@@ -15,6 +15,11 @@ public class ProductRepository : IProductRepository
 
     public IUnitOfWork UnitOfWork => _context;
 
+    public Task<Product> GetAsync(int id)
+    {
+        return _context.Products.Include(t => t.ProductItems).SingleAsync(p => p.Id==id);
+    }
+
     public Product Add(Product product)
     {
         return _context.Products.Add(product).Entity;
@@ -35,6 +40,11 @@ public class ProductRepository : IProductRepository
     public Task<List<Product>> GetListWithPageAsync(int pageIndex, int pageSize)
     {
         return _context.Products.Include(t => t.ProductItems).OrderBy(p => p.Id).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToListAsync();
+    }
+
+    public Task<List<Product>> GetListAsync()
+    {
+        return _context.Products.Include(t => t.ProductItems).OrderBy(p => p.Id).ToListAsync();
     }
 
     public Task<int> GetCount()

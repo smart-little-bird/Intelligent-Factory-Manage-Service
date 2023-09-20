@@ -6,5 +6,5 @@ public interface IProductQueries
 {
     Task<ProductPageDto> GetProductListAsync(int pageIndex, int pageSize);
 
-    IAsyncEnumerable<ProductListDto> GetProductListAsync();
+    Task<IEnumerable<ProductListDto>> GetProductListAsync();
 }

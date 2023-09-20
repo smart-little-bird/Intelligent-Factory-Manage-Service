@@ -28,10 +28,10 @@ public class ProductQueries : IProductQueries
             Total = total
         });
     }
-
-
-    public IAsyncEnumerable<ProductListDto> GetProductListAsync()
+    
+    public async Task<IEnumerable<ProductListDto>> GetProductListAsync()
     {
-        throw new NotImplementedException();
+        var products = await _productRepository.GetListAsync();
+        return products.Select(t => _mapper.Map<ProductListDto>(t));
     }
 }
