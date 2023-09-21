@@ -11,7 +11,7 @@ public class DeleteClientCommand : IRequest
 public class DeleteClientCommandHandler : IRequestHandler<DeleteClientCommand>
 {
     private readonly IClientRepository _clientRepository;
-    private ILogger<DeleteClientCommandHandler> _logger;
+    private readonly ILogger<DeleteClientCommandHandler> _logger;
 
     public DeleteClientCommandHandler(IClientRepository clientRepository, ILogger<DeleteClientCommandHandler> logger)
     {

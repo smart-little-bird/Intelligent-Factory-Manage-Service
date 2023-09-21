@@ -64,4 +64,14 @@ public class ProductController : CommonControllerBase
         var result = await _productQueries.GetProductListAsync();
         return Succeed(result, StatusCodes.Status201Created);
     }
+    
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpDelete("{id:int}")]
+    public async Task<IActionResult> DeleteAsync([FromRoute] int id)
+    {
+        await _mediator.Send(new DeleteProductCommand { Id = id });
+        return Succeed(StatusCodes.Status200OK);
+    }
 }
