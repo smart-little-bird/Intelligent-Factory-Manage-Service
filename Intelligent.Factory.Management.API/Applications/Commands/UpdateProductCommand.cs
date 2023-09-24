@@ -5,17 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Intelligent.Factory.Management.API.Applications.Commands;
 
-public class UpdateProductCommand: IRequest<int>
+public class UpdateProductCommand : IRequest<int>
 {
-    public UpdateProductCommand(int id,string description, string entryCriteria, IEnumerable<ProductItemDto> productItemDtos)
+    public UpdateProductCommand(int id, string description, string entryCriteria, IEnumerable<ProductItemDto> productItemDtos)
     {
         Id = id;
         Description = description;
         EntryCriteria = entryCriteria;
         ProductItemDtos = productItemDtos;
     }
-    
-    [FromRoute] 
+
+    [FromRoute]
     public int Id { get; set; }
 
     public string Description { get; set; }
@@ -23,7 +23,7 @@ public class UpdateProductCommand: IRequest<int>
     public string EntryCriteria { get; set; }
 
     public IEnumerable<ProductItemDto> ProductItemDtos { get; set; }
-    
+
 }
 
 public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, int>
@@ -37,8 +37,8 @@ public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand,
 
     public async Task<int> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
     {
-        var product =await _productRepository.GetAsync(request.Id);
-        product.UpdateProduct(request.Description,request.EntryCriteria);
+        var product = await _productRepository.GetAsync(request.Id);
+        product.UpdateProduct(request.Description, request.EntryCriteria);
         product.RemoveProductItems();
         foreach (var productItemDto in request.ProductItemDtos)
         {

@@ -28,7 +28,7 @@ public class ProductQueries : IProductQueries
             Total = total
         });
     }
-    
+
     public async Task<IEnumerable<ProductListDto>> GetProductListAsync()
     {
         var products = await _productRepository.GetListAsync();

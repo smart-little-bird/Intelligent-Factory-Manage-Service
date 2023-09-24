@@ -28,7 +28,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Applications\DomianEventHandlers" />
       <Folder Include="Extensions" />
     </ItemGroup>
 

@@ -64,7 +64,7 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                     b.HasIndex("ClientAgentId");
 
-                    b.ToTable("client", "IntelligentFactoryManagement");
+                    b.ToTable("client", "intelligent_factory_management");
                 });
 
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate.ClientAgent", b =>
@@ -85,7 +85,72 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("clientAgent", "IntelligentFactoryManagement");
+                    b.ToTable("clientAgent", "intelligent_factory_management");
+                });
+
+            modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.Contract", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("ClientId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ClientName")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<string>("ContractNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("contract", "intelligent_factory_management");
+                });
+
+            modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.ContractContext", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("Amount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ContractId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Material")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UnitPrice")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ContractId");
+
+                    b.ToTable("contractContext", "intelligent_factory_management");
                 });
 
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate.Product", b =>
@@ -106,7 +171,7 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("product", "IntelligentFactoryManagement");
+                    b.ToTable("product", "intelligent_factory_management");
                 });
 
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate.ProductItem", b =>
@@ -159,7 +224,7 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("productItem", "IntelligentFactoryManagement");
+                    b.ToTable("productItem", "intelligent_factory_management");
                 });
 
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate.Client", b =>
@@ -197,7 +262,7 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                             b1.HasKey("ClientId");
 
-                            b1.ToTable("client", "IntelligentFactoryManagement");
+                            b1.ToTable("client", "intelligent_factory_management");
 
                             b1.WithOwner()
                                 .HasForeignKey("ClientId");
@@ -220,7 +285,7 @@ namespace Intelligent.Factory.Management.API.Migrations
 
                             b1.HasKey("ClientId");
 
-                            b1.ToTable("client", "IntelligentFactoryManagement");
+                            b1.ToTable("client", "intelligent_factory_management");
 
                             b1.WithOwner()
                                 .HasForeignKey("ClientId");
@@ -235,6 +300,76 @@ namespace Intelligent.Factory.Management.API.Migrations
                     b.Navigation("ClientAgent");
                 });
 
+            modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.Contract", b =>
+                {
+                    b.OwnsOne("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.PaymentMethod", "PaymentMethod", b1 =>
+                        {
+                            b1.Property<int>("ContractId")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("Id")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("PayPercent")
+                                .HasColumnType("int")
+                                .HasColumnName("PayPercent");
+
+                            b1.Property<int>("PaymentType")
+                                .HasColumnType("int")
+                                .HasColumnName("PaymentType");
+
+                            b1.HasKey("ContractId");
+
+                            b1.HasIndex("Id");
+
+                            b1.ToTable("contract", "intelligent_factory_management");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ContractId");
+                        });
+
+                    b.Navigation("PaymentMethod")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.ContractContext", b =>
+                {
+                    b.HasOne("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.Contract", null)
+                        .WithMany("ContractContexts")
+                        .HasForeignKey("ContractId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.OwnsOne("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.ContractContextProperty", "ContractContextProperty", b1 =>
+                        {
+                            b1.Property<int>("ContractContextId")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("Id")
+                                .HasColumnType("int");
+
+                            b1.Property<bool>("IsIndependent")
+                                .HasColumnType("bit")
+                                .HasColumnName("IsIndependent");
+
+                            b1.Property<int>("ProductId")
+                                .HasColumnType("int")
+                                .HasColumnName("ProductId");
+
+                            b1.HasKey("ContractContextId");
+
+                            b1.HasIndex("Id");
+
+                            b1.ToTable("contractContext", "intelligent_factory_management");
+
+                            b1.WithOwner()
+                                .HasForeignKey("ContractContextId");
+                        });
+
+                    b.Navigation("ContractContextProperty")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate.ProductItem", b =>
                 {
                     b.HasOne("Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate.Product", null)
@@ -242,6 +377,11 @@ namespace Intelligent.Factory.Management.API.Migrations
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate.Contract", b =>
+                {
+                    b.Navigation("ContractContexts");
                 });
 
             modelBuilder.Entity("Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate.Product", b =>

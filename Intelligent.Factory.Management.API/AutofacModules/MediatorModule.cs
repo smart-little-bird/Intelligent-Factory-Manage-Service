@@ -2,6 +2,7 @@
 using Autofac;
 using AutoMapper;
 using Intelligent.Factory.Management.API.Applications.Commands;
+using Intelligent.Factory.Management.Domain.Event;
 using MediatR;
 
 namespace Intelligent.Factory.Management.API.AutofacModules;
@@ -16,6 +17,9 @@ public class MediatorModule : Autofac.Module
         // Register all the Command classes (they implement IRequestHandler) in assembly holding the Commands
         builder.RegisterAssemblyTypes(typeof(CreateClientCommand).GetTypeInfo().Assembly)
             .AsClosedTypesOf(typeof(IRequestHandler<,>));
+
+        builder.RegisterAssemblyTypes(typeof(ContractBindClientDomainEvent).GetTypeInfo().Assembly)
+            .AsClosedTypesOf(typeof(INotificationHandler<>));
 
 
         // // Register the DomainEventHandler classes (they implement INotificationHandler<>) in assembly holding the Domain Events

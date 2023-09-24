@@ -17,7 +17,7 @@ public class ProductRepository : IProductRepository
 
     public Task<Product> GetAsync(int id)
     {
-        return _context.Products.Include(t => t.ProductItems).SingleAsync(p => p.Id==id);
+        return _context.Products.Include(t => t.ProductItems).SingleAsync(p => p.Id == id);
     }
 
     public Product Add(Product product)

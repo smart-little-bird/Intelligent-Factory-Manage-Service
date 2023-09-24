@@ -1,6 +1,4 @@
 using Intelligent.Factory.Management.API.Applications.Commands;
-using Intelligent.Factory.Management.API.Applications.Queries;
-using Intelligent.Factory.Management.API.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,9 +25,9 @@ public class ContractController : CommonControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateAsync([FromBody] CreateContractCommand createContractCommand)
     {
-        var result = await _mediator.Send(createProductCommand);
+        var result = await _mediator.Send(createContractCommand);
         _logger.LogInformation($"create the product succeed: id{result}");
         return Succeed(result, StatusCodes.Status201Created);
     }
- 
+
 }

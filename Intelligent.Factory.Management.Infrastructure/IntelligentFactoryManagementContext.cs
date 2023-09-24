@@ -1,4 +1,5 @@
 ﻿using Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
+using Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using Intelligent.Factory.Management.Domain.SeedWork;
 using Intelligent.Factory.Management.Infrastructure.EntityConfigurations;
@@ -10,11 +11,13 @@ namespace Intelligent.Factory.Management.Infrastructure;
 
 public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
 {
-    public const string DEFAULT_SCHEMA = "IntelligentFactoryManagement";
+    public const string DEFAULT_SCHEMA = "intelligent_factory_management";
 
     public DbSet<Client> Clients { get; set; }
 
     public DbSet<Product> Products { get; set; }
+
+    public DbSet<Contract> Contracts { get; set; }
 
     private readonly IMediator? _mediator;
 
@@ -42,6 +45,9 @@ public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
 
         modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
         modelBuilder.ApplyConfiguration(new ProductItemEntityTypeConfiguration());
+        
+        modelBuilder.ApplyConfiguration(new ContractEntityTypeConfiguration());
+        modelBuilder.ApplyConfiguration(new ContractContextEntityTypeConfiguration());
     }
 
     public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))

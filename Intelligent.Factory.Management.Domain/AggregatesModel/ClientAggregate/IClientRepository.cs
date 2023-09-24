@@ -10,5 +10,5 @@ public interface IClientRepository : IRepository<Client>
 
     Task DeleteAsync(int id);
 
-    Task<Client> FindByIdAsync(string id);
+    Task<Client?> FindByIdAsync(int id);
 }

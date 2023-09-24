@@ -6,13 +6,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d4f95a-acc9-40f4-9722-16aedeba19a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteProductCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/DomianEventHandlers/ContractBindClientDomainEventHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/Contract.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/ContractContext.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/ContractContextProperty.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/IContractRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/PaymentMethod.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/PaymentType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/Event/ContractBindClientDomainEvent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/ContractContextEntityTypeConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/ContractEntityTypeConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ContractRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteClientCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteClientCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteProductCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteProductCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/UpdateProductCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/UpdateProductCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/MediatorModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/MediatorModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Intelligent.Factory.Management.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Intelligent.Factory.Management.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20230913154806_context_init.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20230913154806_context_init.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20230918152815_product_context.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20230918152815_product_context.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/IntelligentFactoryManagementContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ClientAggregate/IClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ClientAggregate/IClientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/IProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/IProductRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/Intelligent.Factory.Management.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/Intelligent.Factory.Management.Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/IntelligentFactoryManagementContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/IntelligentFactoryManagementContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ClientRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ClientRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ProductRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ProductRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,16 +138,55 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs</url>
-          <line>29</line>
+          <line>27</line>
           <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Controllers\ContractController.cs" initialLine="29" containingFunctionPresentation="method 'CreateAsync'">
             <startOffsets>
-              <option value="999" />
+              <option value="889" />
             </startOffsets>
             <endOffsets>
-              <option value="1055" />
+              <option value="946" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs</url>
+          <line>90</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Applications\Commands\CreateContractCommand.cs" initialLine="86" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="2254" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2388" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Controllers\ContractController.cs" initialLine="30" containingFunctionPresentation="method 'CreateAsync'">
+            <startOffsets>
+              <option value="955" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1021" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs</url>
+          <line>103</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Applications\Commands\CreateContractCommand.cs" initialLine="103" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="3025" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3072" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

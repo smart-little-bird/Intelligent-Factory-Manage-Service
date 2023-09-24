@@ -8,7 +8,7 @@ public class ProductPageDto
     {
     }
 
-    public ProductPageDto(IEnumerable<ProductListDto> productListDtos, Page page):this()
+    public ProductPageDto(IEnumerable<ProductListDto> productListDtos, Page page) : this()
     {
         ProductListDtos = productListDtos;
         Page = page;
@@ -25,7 +25,7 @@ public class ProductListDto
     {
     }
 
-    public ProductListDto(int id, string description, string entryCriteria, IEnumerable<ProductListItemDto> productItemDtos):this()
+    public ProductListDto(int id, string description, string entryCriteria, IEnumerable<ProductListItemDto> productItemDtos) : this()
     {
         Id = id;
         Description = description;
@@ -48,7 +48,7 @@ public class ProductListItemDto
     {
     }
 
-    public ProductListItemDto(int id, ProductType productType, string name, string specifications, string unit, string material, string technicalRequirements, string remark):this()
+    public ProductListItemDto(int id, ProductType productType, string name, string specifications, string unit, string material, string technicalRequirements, string remark) : this()
     {
         Id = id;
         ProductType = productType;

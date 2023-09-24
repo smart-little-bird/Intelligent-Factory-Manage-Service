@@ -34,7 +34,7 @@ public class ProductController : CommonControllerBase
         _logger.LogInformation($"create the product succeed: id{result}");
         return Succeed(result, StatusCodes.Status201Created);
     }
-    
+
     [ProducesResponseType(typeof(ProductPageDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -44,7 +44,7 @@ public class ProductController : CommonControllerBase
         var result = await _productQueries.GetProductListAsync(page.PageIndex, page.PageSize);
         return Succeed(result, StatusCodes.Status201Created);
     }
-    
+
     [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -54,7 +54,7 @@ public class ProductController : CommonControllerBase
         var result = await _mediator.Send(updateProductCommand);
         return Succeed(result, StatusCodes.Status200OK);
     }
-    
+
     [ProducesResponseType(typeof(ProductPageDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -64,7 +64,7 @@ public class ProductController : CommonControllerBase
         var result = await _productQueries.GetProductListAsync();
         return Succeed(result, StatusCodes.Status201Created);
     }
-    
+
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]

@@ -32,12 +32,12 @@ public class ClientRepository : IClientRepository
         );
     }
 
-    public async Task<Client> FindByIdAsync(string id)
+    public async Task<Client?> FindByIdAsync(int id)
     {
         var client = await _context.Clients.Include(b => b.ClientAgent)
             .Include(b => b.Address)
             .Include(b => b.Bank)
-            .Where(b => b.Id == int.Parse(id))
+            .Where(b => b.Id == id)
             .SingleOrDefaultAsync();
         return client;
     }

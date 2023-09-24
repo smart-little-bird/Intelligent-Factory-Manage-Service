@@ -3,16 +3,16 @@ using MediatR;
 
 namespace Intelligent.Factory.Management.API.Applications.Commands;
 
-public class DeleteProductCommand: IRequest
+public class DeleteProductCommand : IRequest
 {
     public int Id { get; set; }
 }
 
 public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand>
 {
-    
+
     private readonly IProductRepository _productRepository;
-    
+
     private readonly ILogger<DeleteProductCommandHandler> _logger;
 
     public DeleteProductCommandHandler(IProductRepository productRepository, ILogger<DeleteProductCommandHandler> logger)
@@ -23,6 +23,6 @@ public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommand>
 
     public Task Handle(DeleteProductCommand request, CancellationToken cancellationToken)
     {
-       return _productRepository.DeleteAsync(request.Id);
+        return _productRepository.DeleteAsync(request.Id);
     }
 }

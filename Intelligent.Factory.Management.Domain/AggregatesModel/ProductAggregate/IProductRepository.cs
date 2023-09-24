@@ -1,4 +1,4 @@
-using System.Runtime.InteropServices.ComTypes;
+
 using Intelligent.Factory.Management.Domain.SeedWork;
 
 namespace Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
@@ -6,7 +6,7 @@ namespace Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate
 public interface IProductRepository : IRepository<Product>
 {
     Task<Product> GetAsync(int id);
-    
+
     Product Add(Product product);
 
     Product Update(Product product);
@@ -16,6 +16,6 @@ public interface IProductRepository : IRepository<Product>
     Task<List<Product>> GetListWithPageAsync(int pageIndex, int pageSize);
 
     Task<List<Product>> GetListAsync();
-    
+
     Task<int> GetCount();
 }

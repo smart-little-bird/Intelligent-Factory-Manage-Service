@@ -7,11 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Event" />
-    </ItemGroup>
-
-    <ItemGroup>
       <PackageReference Include="MediatR.Contracts" Version="2.0.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.21" />
     </ItemGroup>
 
 </Project>
