@@ -1,4 +1,5 @@
 using Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate;
+using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using MediatR;
 
 namespace Intelligent.Factory.Management.API.Applications.Commands;
@@ -37,6 +38,15 @@ public class CreateContractCommand : IRequest<int>
     public string Province { get; set; }
 
     public IEnumerable<ContractItemDto> ContractItemDtos { get; set; }
+
+    public ContractPayMethodDto ContractPayMethod { get; set; }
+
+    public record ContractPayMethodDto
+    {
+        public PaymentType PaymentType { get; init; }
+
+        public List<int>? PayPercents { get; init; }
+    }
 
     public record ContractItemDto
     {
