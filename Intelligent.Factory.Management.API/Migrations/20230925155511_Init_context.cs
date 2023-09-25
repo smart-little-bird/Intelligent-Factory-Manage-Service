@@ -37,9 +37,8 @@ namespace Intelligent.Factory.Management.API.Migrations
                     ClientId = table.Column<int>(type: "int", nullable: false),
                     ClientName = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PaymentMethod_Id = table.Column<int>(type: "int", nullable: false),
                     PaymentType = table.Column<int>(type: "int", nullable: false),
-                    PayPercent = table.Column<int>(type: "int", nullable: false)
+                    PayPercent = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -103,7 +102,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ContractContextProperty_Id = table.Column<int>(type: "int", nullable: false),
                     IsIndependent = table.Column<bool>(type: "bit", nullable: false),
                     ProductId = table.Column<int>(type: "int", nullable: false),
                     Material = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -159,18 +157,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                 schema: "intelligent_factory_management",
                 table: "client",
                 column: "ClientAgentId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_contract_PaymentMethod_Id",
-                schema: "intelligent_factory_management",
-                table: "contract",
-                column: "PaymentMethod_Id");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_contractContext_ContractContextProperty_Id",
-                schema: "intelligent_factory_management",
-                table: "contractContext",
-                column: "ContractContextProperty_Id");
 
             migrationBuilder.CreateIndex(
                 name: "IX_contractContext_ContractId",

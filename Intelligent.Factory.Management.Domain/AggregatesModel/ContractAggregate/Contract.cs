@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using Intelligent.Factory.Management.Domain.Event;
 using Intelligent.Factory.Management.Domain.SeedWork;
@@ -52,7 +53,7 @@ public class Contract : Entity, IAggregateRoot
         ClientId = clientId;
         ClientName = clientName;
         Phone = phone;
-        this.AddDomainEvent(new ContractBindClientDomainEvent(clientId, clientName, phone, bankAccount, street, city, province));
+        AddDomainEvent(new ContractBindClientDomainEvent(clientId, clientName, phone, bankAccount, street, city, province));
     }
 
     public void AddContractContext(string productName, string material, string unit,
@@ -63,12 +64,8 @@ public class Contract : Entity, IAggregateRoot
         _contractContexts.Add(contractContext);
     }
 
-    public void DeterminePaymentMethod(PaymentType paymentType, int payPercent)
+    public void DeterminePaymentMethod(PaymentType paymentType, List<int> payPercent)
     {
-        PaymentMethod = new PaymentMethod()
-        {
-            PaymentType = paymentType,
-            PayPercent = payPercent,
-        };
+        PaymentMethod = new PaymentMethod(paymentType, JsonSerializer.Serialize(payPercent));
     }
 }

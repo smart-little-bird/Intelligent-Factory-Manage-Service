@@ -33,9 +33,10 @@ public class ContractEntityTypeConfiguration: IEntityTypeConfiguration<Contract>
         builder
             .OwnsOne(o => o.PaymentMethod, a =>
             {
-                a.HasIndex(t => t.Id);
+                // a.HasIndex(t => t.Id); 
+                // todo fix the problem
                 a.Property(p => p.PaymentType).HasColumnName("PaymentType");
-                a.Property(p => p.PayPercent).HasColumnName("PayPercent");
+                a.Property(p => p.PayPercentJson).HasColumnName("PayPercent");
             });
 
         builder.HasMany(b => b.ContractContexts)

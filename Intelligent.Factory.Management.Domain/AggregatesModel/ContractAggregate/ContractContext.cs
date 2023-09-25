@@ -50,6 +50,9 @@ public class ContractContext : Entity
     /// </summary>
     public int Amount { get; set; }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public int ContractId { get; set; }
 
 }

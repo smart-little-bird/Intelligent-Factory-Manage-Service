@@ -1,3 +1,4 @@
+
 using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using Intelligent.Factory.Management.Domain.SeedWork;
 
@@ -5,15 +6,23 @@ namespace Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregat
 
 public class PaymentMethod : ValueObject
 {
-    public int Id { get; set; }
-    
+    private PaymentMethod()
+    {
+    }
+
+    public PaymentMethod(PaymentType paymentType,string payPercentJson):this()
+    {
+        PaymentType = paymentType;
+        PayPercentJson = payPercentJson;
+    }
+
     public PaymentType PaymentType { get; set; }
 
-    public int PayPercent { get; set; }
+    public string PayPercentJson { get; set; }
 
     protected override IEnumerable<object> GetEqualityComponents()
     {
         yield return PaymentType;
-        yield return PayPercent;
+        yield return PayPercentJson;
     }
 }

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Intelligent.Factory.Management.API.Migrations
 {
     [DbContext(typeof(IntelligentFactoryManagementContext))]
-    [Migration("20230924151348_Init_context")]
+    [Migration("20230925155511_Init_context")]
     partial class Init_context
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -309,11 +309,9 @@ namespace Intelligent.Factory.Management.API.Migrations
                             b1.Property<int>("ContractId")
                                 .HasColumnType("int");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("int");
-
-                            b1.Property<int>("PayPercent")
-                                .HasColumnType("int")
+                            b1.Property<string>("PayPercentJson")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)")
                                 .HasColumnName("PayPercent");
 
                             b1.Property<int>("PaymentType")
@@ -321,8 +319,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                                 .HasColumnName("PaymentType");
 
                             b1.HasKey("ContractId");
-
-                            b1.HasIndex("Id");
 
                             b1.ToTable("contract", "intelligent_factory_management");
 
@@ -347,9 +343,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                             b1.Property<int>("ContractContextId")
                                 .HasColumnType("int");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("int");
-
                             b1.Property<bool>("IsIndependent")
                                 .HasColumnType("bit")
                                 .HasColumnName("IsIndependent");
@@ -359,8 +352,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                                 .HasColumnName("ProductId");
 
                             b1.HasKey("ContractContextId");
-
-                            b1.HasIndex("Id");
 
                             b1.ToTable("contractContext", "intelligent_factory_management");
 

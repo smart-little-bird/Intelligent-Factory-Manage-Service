@@ -307,11 +307,9 @@ namespace Intelligent.Factory.Management.API.Migrations
                             b1.Property<int>("ContractId")
                                 .HasColumnType("int");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("int");
-
-                            b1.Property<int>("PayPercent")
-                                .HasColumnType("int")
+                            b1.Property<string>("PayPercentJson")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)")
                                 .HasColumnName("PayPercent");
 
                             b1.Property<int>("PaymentType")
@@ -319,8 +317,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                                 .HasColumnName("PaymentType");
 
                             b1.HasKey("ContractId");
-
-                            b1.HasIndex("Id");
 
                             b1.ToTable("contract", "intelligent_factory_management");
 
@@ -345,9 +341,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                             b1.Property<int>("ContractContextId")
                                 .HasColumnType("int");
 
-                            b1.Property<int>("Id")
-                                .HasColumnType("int");
-
                             b1.Property<bool>("IsIndependent")
                                 .HasColumnType("bit")
                                 .HasColumnName("IsIndependent");
@@ -357,8 +350,6 @@ namespace Intelligent.Factory.Management.API.Migrations
                                 .HasColumnName("ProductId");
 
                             b1.HasKey("ContractContextId");
-
-                            b1.HasIndex("Id");
 
                             b1.ToTable("contractContext", "intelligent_factory_management");
 

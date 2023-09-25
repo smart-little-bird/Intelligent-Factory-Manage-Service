@@ -16,7 +16,10 @@
               <node kind="schema" qname="@" />
             </node>
             <node kind="database" qname="IntelligentFactoryManage">
-              <node kind="schema" qname="IntelligentFactoryManagement" negative="1" />
+              <node kind="schema" negative="1">
+                <name qname="IntelligentFactoryManagement" />
+                <name qname="intelligent_factory_management" />
+              </node>
             </node>
           </node>
         </introspection-scope>

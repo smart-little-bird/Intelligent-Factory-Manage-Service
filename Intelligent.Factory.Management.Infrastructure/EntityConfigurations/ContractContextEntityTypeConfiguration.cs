@@ -39,7 +39,7 @@ public class ContractContextEntityTypeConfiguration : IEntityTypeConfiguration<C
             .OwnsOne(o => o.ContractContextProperty,
                 a =>
                 {
-                    a.HasIndex(t => t.Id);
+                    // a.HasIndex(t => t.Id);
                     a.Property(p => p.ProductId).HasColumnName("ProductId");
                     a.Property(p => p.IsIndependent).HasColumnName("IsIndependent");
                 });
