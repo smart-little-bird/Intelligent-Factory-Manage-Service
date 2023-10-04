@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Intelligent.Factory.Management.Infrastructure.EntityConfigurations;
 
-public class ContractEntityTypeConfiguration: IEntityTypeConfiguration<Contract>
+public class ContractEntityTypeConfiguration : IEntityTypeConfiguration<Contract>
 {
     public void Configure(EntityTypeBuilder<Contract> builder)
     {
@@ -21,11 +21,11 @@ public class ContractEntityTypeConfiguration: IEntityTypeConfiguration<Contract>
         builder.Property(b => b.ClientId)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-        
+
         builder.Property(b => b.Phone)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-        
+
         builder.Property(b => b.ContractNo)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
@@ -33,11 +33,18 @@ public class ContractEntityTypeConfiguration: IEntityTypeConfiguration<Contract>
         builder
             .OwnsOne(o => o.PaymentMethod, a =>
             {
-                // a.HasIndex(t => t.Id); 
-                // todo fix the problem
                 a.Property(p => p.PaymentType).HasColumnName("PaymentType");
                 a.Property(p => p.PayPercentJson).HasColumnName("PayPercent");
             });
+
+        builder
+            .OwnsOne(o => o.LogisticsInfo, a =>
+            {
+                a.Property(p => p.ShipDateTime).HasColumnName("ShipDateTime");
+                a.Property(p => p.ShipType).HasColumnName("ShipType");
+                a.Property(p => p.LogisticsUndertaker).HasColumnName("LogisticsUndertaker");
+            });
+
 
         builder.HasMany(b => b.ContractContexts)
             .WithOne()

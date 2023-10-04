@@ -11,7 +11,7 @@ public class CreateContractCommand : IRequest<int>
     }
 
     public CreateContractCommand(int clientId, string clientName, string phone, string bankAccount, string street,
-        string city, string province):this()
+        string city, string province) : this()
     {
         ClientId = clientId;
         ClientName = clientName;
@@ -20,7 +20,7 @@ public class CreateContractCommand : IRequest<int>
         Street = street;
         City = city;
         Province = province;
-        ContractItemDtos = new List<ContractItemDto>();
+        ContractItems = new List<ContractItemDto>();
     }
 
     public int ClientId { get; set; }
@@ -37,9 +37,21 @@ public class CreateContractCommand : IRequest<int>
 
     public string Province { get; set; }
 
-    public IEnumerable<ContractItemDto> ContractItemDtos { get; set; }
+    public IEnumerable<ContractItemDto> ContractItems { get; set; }
 
     public ContractPayMethodDto ContractPayMethod { get; set; }
+
+    public ContractShippingInfoDto ContractShippingInfo { get; set; }
+
+
+    public record ContractShippingInfoDto
+    {
+        public DateTime ShipDateTime { get; init; }
+
+        public string ShipType { get; init; }
+
+        public string LogisticsUndertaker { get; init; }
+    }
 
     public record ContractPayMethodDto
     {
@@ -53,17 +65,17 @@ public class CreateContractCommand : IRequest<int>
         /// <summary>
         /// 
         /// </summary>
-        public string ProductName { get;  set; }
+        public string ProductName { get; set; }
 
         /// <summary>
         /// 材质
         /// </summary>
-        public string Material { get;  set; }
+        public string Material { get; set; }
 
         /// <summary>
         /// 单位
         /// </summary>
-        public string Unit { get;  set; }
+        public string Unit { get; set; }
 
         /// <summary>
         /// 单价
@@ -104,13 +116,16 @@ public class CreateContractCommandHandler : IRequestHandler<CreateContractComman
         var contract = new Contract(contractNo);
         contract.BingClient(request.ClientId, request.ClientName, request.Phone, request.BankAccount, request.Street,
             request.City, request.Province);
-        foreach (var contractItemDto in request.ContractItemDtos)
+
+        contract.DeterminePaymentMethod(request.ContractPayMethod.PaymentType, request.ContractPayMethod.PayPercents);
+        contract.InitLogisticsInfo(request.ContractShippingInfo.ShipDateTime, request.ContractShippingInfo.ShipType,
+            request.ContractShippingInfo.LogisticsUndertaker);
+        foreach (var itemDto in request.ContractItems)
         {
-            var contractContext = new ContractContext(contractItemDto.ProductName, contractItemDto.Material,
-                contractItemDto.Unit,
-                contractItemDto.UnitPrice, contractItemDto.Amount);
-            contractContext.InitContactContextProperty(contractItemDto.IsIndependent, contractItemDto.ProductId);
+            contract.AddContractContext(itemDto.ProductName, itemDto.Material, itemDto.Unit, itemDto.UnitPrice,
+                itemDto.Amount, itemDto.IsIndependent, itemDto.ProductId);
         }
+
         var result = _contractRepository.Add(contract);
 
         await _contractRepository.UnitOfWork

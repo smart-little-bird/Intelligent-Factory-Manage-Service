@@ -45,6 +45,22 @@ public class Contract : Entity, IAggregateRoot
     /// </summary>
     public PaymentMethod PaymentMethod { get; set; }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    public LogisticsInfo LogisticsInfo { get; set; }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="clientId"></param>
+    /// <param name="clientName"></param>
+    /// <param name="phone"></param>
+    /// <param name="bankAccount"></param>
+    /// <param name="street"></param>
+    /// <param name="city"></param>
+    /// <param name="province"></param>
+
 
     public void BingClient(int clientId,
         string clientName, string phone,
@@ -64,7 +80,12 @@ public class Contract : Entity, IAggregateRoot
         _contractContexts.Add(contractContext);
     }
 
-    public void DeterminePaymentMethod(PaymentType paymentType, List<int> payPercent)
+    public void InitLogisticsInfo(DateTime shipDateTime, string shipType, string logisticsUndertaker)
+    {
+        this.LogisticsInfo = new LogisticsInfo(shipDateTime, shipType, logisticsUndertaker);
+    }
+
+    public void DeterminePaymentMethod(PaymentType paymentType, List<int>? payPercent)
     {
         PaymentMethod = new PaymentMethod(paymentType, JsonSerializer.Serialize(payPercent));
     }

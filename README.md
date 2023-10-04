@@ -102,15 +102,36 @@ _# Intelligent-Factory-Manage-Service
 
 ## Contract Core Domain
 ### Create Contract Request DTO
-| 字段                          | 类型               | 备注     | 是否在table显示 | 是否form提交|
-|-----------------------------|------------------|--------|------------|------------|
-| ClientId                    | int              | 客户Id   |            | 是        |
-| ClientName                  | string           | 客户名称   |            | 是        |
-| Phone                       | string           | 客户电话   |            | 是        |
-| BankAccount                 | int              | Id     |            | 是        |
-| Street                      | string           | 客户地址街道 |            | 是        |
-| City                        | string           | 客户地址城市 |            | 是        |
-| Province                    | string           | 客户地址省份 |            | 是        |
-| ContractItemDtos            | [ContractItemDto] | 合同明细集合 |            | 是        |
-| ContractPayMethod            | ContractPayMethod  | 付款方式   |            | 是        |
+| 字段                          | 类型                      | 备注          | 是否在table显示   | 是否form提交|
+|-----------------------------|-------------------------|-------------|--------------|------------|
+| ClientId                    | int                     | 客户Id        |              | 是        |
+| ClientName                  | string                  | 客户名称        |              | 是        |
+| Phone                       | string                  | 客户电话        |              | 是        |
+| BankAccount                 | int                     | Id          |              | 是        |
+| Street                      | string                  | 客户地址街道      |              | 是        |
+| City                        | string                  | 客户地址城市      |              | 是        |
+| Province                    | string                  | 客户地址省份      |              | 是        |
+| ContractItems               | [ContractItemDto]       | 合同明细集合      |              | 是        |
+| ContractPayMethod           | ContractPayMethod       | 付款方式        |              | 是        |
+| ContractShippingInfo        | ContractShippingInfoDto | 合同配送信息      |              | 是        |
 #### ContractItemDto DTO
+| 字段                 | 类型        | 备注           | 是否在table显示 | 是否form提交    |
+|---------------------|-----------|--------------|------------|-------------|
+| ProductName         | string    | 产品名称       |            | 是           |
+| Unit                | string    | 单位           |            | 是           |
+| Amount              | int       | 数量           |            | 是           |
+| UnitPrice           | int       | 单价           |            | 是           |
+| Material            | string    | 材料           |            | 是           |
+| IsIndependent       | bool      | 是否独立产品     |            | 是         |
+| ProductId            | int       | 产品ID         |            | 是           |
+#### ContractPayMethod DTO
+| 字段                 | 类型                | 备注         | 是否在table显示 | 是否form提交 |
+|---------------------|-------------------|------------|-----------|-------------|
+| PaymentType         | PaymentType[Enum] | 支付方式       |         | 是          |
+| PayPercents         | List<int>?        | 支付百分比集合    |         | 是          |、
+#### ContractShippingInfoDto DTO
+| 字段                 | 类型      | 备注       | 是否在table显示 | 是否form提交 |
+|---------------------|----------|------------|------------|-------------|
+| ShipDateTime        | DateTime | 交货日期      |            | 是          |
+| ShipType            | string   | 交货方式       |            | 是          |
+| LogisticsUndertaker | string   | 物流承担方      |            | 是          |
