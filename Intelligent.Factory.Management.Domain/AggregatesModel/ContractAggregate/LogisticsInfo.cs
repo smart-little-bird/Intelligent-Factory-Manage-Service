@@ -2,9 +2,10 @@ using Intelligent.Factory.Management.Domain.SeedWork;
 
 namespace Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate;
 
-public class LogisticsInfo:ValueObject
+public class LogisticsInfo: ValueObject
 {
     private LogisticsInfo(){}
+    
     public LogisticsInfo(DateTime shipDateTime, string shipType, string logisticsUndertaker):this()
     {
         ShipDateTime = shipDateTime;

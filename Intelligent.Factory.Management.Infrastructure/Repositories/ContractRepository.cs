@@ -30,4 +30,14 @@ public class ContractRepository : IContractRepository
     {
         return _context.Contracts.Update(contract).Entity;
     }
+
+    public Task<List<Contract>> GetListWithPageAsync(int pageIndex, int pageSize)
+    {
+        return _context.Contracts.Include(t => t.LogisticsInfo).OrderBy(p => p.Id).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToListAsync();
+    }
+
+    public Task<int> GetAccount()
+    {
+        return _context.Contracts.CountAsync();
+    }
 }

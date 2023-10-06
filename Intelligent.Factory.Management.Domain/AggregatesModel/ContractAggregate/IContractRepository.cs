@@ -9,4 +9,8 @@ public interface IContractRepository : IRepository<Contract>
     Contract Add(Contract contract);
 
     Contract Update(Contract contract);
+    
+    Task<List<Contract>> GetListWithPageAsync(int pageIndex, int pageSize);
+
+    Task<int> GetAccount();
 }
