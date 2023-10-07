@@ -8,5 +8,5 @@ public interface IContractQueries
     
     Task<int> GetAccountAsync();
     
-    Task<IEnumerable<ContractDetailDto>> GetAsync(int id);
+    IAsyncEnumerable<ContractDetailDto> GetAsync(int id);
 }

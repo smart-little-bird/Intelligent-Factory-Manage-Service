@@ -7,7 +7,7 @@ namespace Intelligent.Factory.Management.API.Applications.Queries;
 
 public class ClientQueries : IClientQueries
 {
-    private string _connectionString = string.Empty;
+    private readonly string _connectionString;
 
     public ClientQueries(string constr)
     {
@@ -62,7 +62,7 @@ public class ClientQueries : IClientQueries
         }
     }
 
-    private ClientListDto MapClientListDto(dynamic result)
+    private static ClientListDto MapClientListDto(dynamic result)
     {
         var client = new ClientListDto
         {

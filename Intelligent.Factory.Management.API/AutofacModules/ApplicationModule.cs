@@ -11,7 +11,7 @@ namespace Intelligent.Factory.Management.API.AutofacModules;
 public class ApplicationModule
     : Autofac.Module
 {
-    public string QueriesConnectionString { get; }
+    private string QueriesConnectionString { get; }
 
     public ApplicationModule(string qconstr)
     {
@@ -31,12 +31,15 @@ public class ApplicationModule
         builder.RegisterType<ProductQueries>()
             .As<IProductQueries>()
             .InstancePerLifetimeScope();
-
+        
+        builder.RegisterType<ContractQueries>()
+            .As<IContractQueries>()
+            .InstancePerLifetimeScope();
+        
         builder.RegisterType<ProductRepository>()
             .As<IProductRepository>()
             .InstancePerLifetimeScope();
-
-
+        
         builder.RegisterType<ContractRepository>()
             .As<IContractRepository>()
             .InstancePerLifetimeScope();

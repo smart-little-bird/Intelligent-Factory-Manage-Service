@@ -8,14 +8,7 @@ public class ClientListPageDto
 
     public PageDto Page { get; set; }
 
-    public record PageDto
-    {
-        public int PageSize { get; set; }
 
-        public int PageIndex { get; set; }
-
-        public int Total { get; set; }
-    }
 }
 
 public class ClientListDto

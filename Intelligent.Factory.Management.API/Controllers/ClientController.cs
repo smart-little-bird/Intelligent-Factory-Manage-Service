@@ -47,7 +47,7 @@ public class ClientController : CommonControllerBase
     [ProducesResponseType(typeof(ClientListPageDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    [HttpGet("")]
+    [HttpGet]
     public async Task<IActionResult> GetListAsync([FromQuery] Page page)
     {
         var result = _clientQueries.GetClientListAsync(page.PageIndex, page.PageSize);
@@ -55,7 +55,7 @@ public class ClientController : CommonControllerBase
         var clientListPageDto = new ClientListPageDto
         {
             ClientListDtos = result,
-            Page = new ClientListPageDto.PageDto
+            Page = new PageDto
             {
                 PageSize = page.PageSize,
                 PageIndex = page.PageIndex,

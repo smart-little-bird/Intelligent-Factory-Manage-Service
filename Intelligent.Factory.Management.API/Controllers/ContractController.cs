@@ -35,10 +35,10 @@ public class ContractController : CommonControllerBase
         return Succeed(result, StatusCodes.Status201Created);
     }
     
-    [ProducesResponseType(typeof(ContractListPageDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(ContractListPageDto),StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    [HttpGet("")]
+    [HttpGet]
     public async Task<IActionResult> GetListAsync([FromQuery] Page page)
     {
         var result =await _contractQueries.GetContractListAsync(page.PageIndex, page.PageSize);
@@ -46,7 +46,7 @@ public class ContractController : CommonControllerBase
         var contractListPageDto = new ContractListPageDto
         {
             ContractListDtos = result,
-            Page = new ContractListPageDto.PageDto
+            Page = new PageDto
             {
                 PageSize = page.PageSize,
                 PageIndex = page.PageIndex,
@@ -60,10 +60,9 @@ public class ContractController : CommonControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [HttpGet("{id:int}")]
-    public async Task<IActionResult> GetAsync([FromRoute] int id)
+    public Task<IActionResult> GetAsync([FromRoute] int id)
     {
-        var result =await _contractQueries.GetAsync(id);
-        return Succeed(result,StatusCodes.Status200OK);
+        var result = _contractQueries.GetAsync(id);
+        return Task.FromResult(Succeed(result,StatusCodes.Status200OK));
     }
-
 }
