@@ -10,6 +10,7 @@ public class Contract : Entity, IAggregateRoot
     public Contract(string contractNo)
     {
         ContractNo = contractNo;
+        _contractContexts = new List<ContractContext>();
     }
 
     /// <summary>

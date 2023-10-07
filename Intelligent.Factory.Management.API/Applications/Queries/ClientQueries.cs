@@ -23,7 +23,7 @@ public class ClientQueries : IClientQueries
 
         var result = await connection.QueryAsync<dynamic>(
             sql:
-            "SELECT * FROM (SELECT Client.Id as ID, CLIENTTYPE, Client.Name as NAME, STREET, CITY,PROVINCE,ZIPCODE,TFN, BANKTITLE, BANKACCOUNT,BILLINGTELEPHONE, CONTACTNUMBER, EMAIL, FAX,ROW_NUMBER() OVER (ORDER BY  Client.Id) AS RowNum,cA.Name as CLIENTNAME,cA.PhoneNumber as CLIENTPHONE FROM  IntelligentFactoryManagement.client AS Client inner join IntelligentFactoryManagement.clientAgent cA on cA.Id = Client.ClientAgentId) AS T WHERE RowNum > (@pageIndex - 1) * @pageSize AND RowNum <= @pageIndex * @pageSize",
+            "SELECT * FROM (SELECT Client.Id as ID, CLIENTTYPE, Client.Name as NAME, STREET, CITY,PROVINCE,ZIPCODE,TFN, BANKTITLE, BANKACCOUNT,BILLINGTELEPHONE, CONTACTNUMBER, EMAIL, FAX,ROW_NUMBER() OVER (ORDER BY  Client.Id) AS RowNum,cA.Name as CLIENTNAME,cA.PhoneNumber as CLIENTPHONE FROM  intelligent_factory_management.client AS Client inner join intelligent_factory_management.clientAgent cA on cA.Id = Client.ClientAgentId) AS T WHERE RowNum > (@pageIndex - 1) * @pageSize AND RowNum <= @pageIndex * @pageSize",
             new { pageIndex, pageSize });
         var enumerable = result.ToList();
         if (enumerable.AsList().Count == 0)
@@ -41,7 +41,7 @@ public class ClientQueries : IClientQueries
         connection.Open();
 
         var result =
-            await connection.QueryAsync<int>(sql: $"SELECT COUNT(1) FROM IntelligentFactoryManagement.client");
+            await connection.QueryAsync<int>(sql: $"SELECT COUNT(1) FROM intelligent_factory_management.client");
         return result.First();
     }
 

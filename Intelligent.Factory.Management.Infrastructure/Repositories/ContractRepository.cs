@@ -33,7 +33,8 @@ public class ContractRepository : IContractRepository
 
     public Task<List<Contract>> GetListWithPageAsync(int pageIndex, int pageSize)
     {
-        return _context.Contracts.Include(t => t.LogisticsInfo).OrderBy(p => p.Id).Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToListAsync();
+        return _context.Contracts.Include(t => t.LogisticsInfo).Include(t => t.ContractContexts).OrderBy(p => p.Id)
+            .Skip(pageSize * (pageIndex - 1)).Take(pageSize).ToListAsync();
     }
 
     public Task<int> GetAccount()

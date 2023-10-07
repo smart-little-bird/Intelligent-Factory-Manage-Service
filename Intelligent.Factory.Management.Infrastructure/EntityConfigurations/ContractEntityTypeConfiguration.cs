@@ -45,7 +45,6 @@ public class ContractEntityTypeConfiguration : IEntityTypeConfiguration<Contract
                 a.Property(p => p.LogisticsUndertaker).HasColumnName("LogisticsUndertaker");
             });
 
-
         builder.HasMany(b => b.ContractContexts)
             .WithOne()
             .HasForeignKey(b => b.ContractId)

@@ -7,17 +7,11 @@
   <component name="ChangeListManager">
     <list default="true" id="17d4f95a-acc9-40f4-9722-16aedeba19a4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ContractListAutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ContractListAutoMapperProfile.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ClientQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ClientQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ContractQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ContractQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IContractQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IContractQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ClientController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ClientController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractListDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractListDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/Contract.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/Contract.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/ContractEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/ContractEntityTypeConfiguration.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +84,7 @@
       <workItem from="1694443794017" duration="1937000" />
       <workItem from="1694527002758" duration="685000" />
       <workItem from="1694527753352" duration="1137000" />
-      <workItem from="1696399575807" duration="9640000" />
+      <workItem from="1696399575807" duration="13175000" />
     </task>
     <servers />
   </component>
@@ -119,7 +113,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs</url>
-          <line>32</line>
+          <line>29</line>
           <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Controllers\ContractController.cs" initialLine="29" containingFunctionPresentation="method 'CreateAsync'">
             <startOffsets>
               <option value="1138" />
@@ -145,7 +139,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs</url>
-          <line>33</line>
+          <line>30</line>
           <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Controllers\ContractController.cs" initialLine="30" containingFunctionPresentation="method 'CreateAsync'">
             <startOffsets>
               <option value="1204" />
@@ -168,6 +162,45 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs</url>
+          <line>112</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Applications\Commands\CreateContractCommand.cs" initialLine="112" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="2834" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2968" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs</url>
+          <line>128</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Applications\Commands\CreateContractCommand.cs" initialLine="128" containingFunctionPresentation="method 'Handle'">
+            <startOffsets>
+              <option value="3753" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3800" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/Contract.cs</url>
+          <line>78</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.Domain\AggregatesModel\ContractAggregate\Contract.cs" initialLine="77" containingFunctionPresentation="method 'AddContractContext'">
+            <startOffsets>
+              <option value="2132" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2222" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
