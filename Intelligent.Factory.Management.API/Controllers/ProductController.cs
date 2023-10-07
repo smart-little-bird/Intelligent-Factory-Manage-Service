@@ -6,9 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Intelligent.Factory.Management.API.Controllers;
 
-[ApiController]
-[Produces("application/json")]
-[Route("[controller]")]
+
 public class ProductController : CommonControllerBase
 {
     private readonly IMediator _mediator;

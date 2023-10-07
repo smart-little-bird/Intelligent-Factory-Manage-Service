@@ -2,6 +2,9 @@
 
 namespace Intelligent.Factory.Management.API.Controllers;
 
+[ApiController]
+[Produces("application/json")]
+[Route("api/[controller]")]
 public abstract class CommonControllerBase : ControllerBase
 {
     protected virtual IActionResult Succeed<T>(T data)
