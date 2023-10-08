@@ -11,7 +11,7 @@ public class ContractController : CommonControllerBase
     private readonly IMediator _mediator;
 
     private readonly IContractQueries _contractQueries;
-    
+
     private readonly ILogger<ContractController> _logger;
 
     public ContractController(IMediator mediator, ILogger<ContractController> logger, IContractQueries contractQueries)
@@ -31,14 +31,14 @@ public class ContractController : CommonControllerBase
         _logger.LogInformation($"create the product succeed: id{result}");
         return Succeed(result, StatusCodes.Status201Created);
     }
-    
-    [ProducesResponseType(typeof(ContractListPageDto),StatusCodes.Status200OK)]
+
+    [ProducesResponseType(typeof(ContractListPageDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [HttpGet]
     public async Task<IActionResult> GetListAsync([FromQuery] Page page)
     {
-        var result =await _contractQueries.GetContractListAsync(page.PageIndex, page.PageSize);
+        var result = await _contractQueries.GetContractListAsync(page.PageIndex, page.PageSize);
         var totalAccount = await _contractQueries.GetAccountAsync();
         var contractListPageDto = new ContractListPageDto
         {
@@ -52,7 +52,7 @@ public class ContractController : CommonControllerBase
         };
         return Succeed(contractListPageDto, StatusCodes.Status200OK);
     }
-    
+
     [ProducesResponseType(typeof(ContractDetailDto), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -60,6 +60,6 @@ public class ContractController : CommonControllerBase
     public Task<IActionResult> GetAsync([FromRoute] int id)
     {
         var result = _contractQueries.GetAsync(id);
-        return Task.FromResult(Succeed(result,StatusCodes.Status200OK));
+        return Task.FromResult(Succeed(result, StatusCodes.Status200OK));
     }
 }

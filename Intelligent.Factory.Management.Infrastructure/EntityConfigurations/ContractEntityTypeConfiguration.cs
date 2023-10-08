@@ -45,6 +45,13 @@ public class ContractEntityTypeConfiguration : IEntityTypeConfiguration<Contract
                 a.Property(p => p.LogisticsUndertaker).HasColumnName("LogisticsUndertaker");
             });
 
+        builder
+            .OwnsOne(o => o.FaxInfo, a =>
+            {
+                a.Property(p => p.IsCombineFax).HasColumnName("IsCombineFax");
+                a.Property(p => p.TaxRate).HasColumnName("TaxRate");
+            });
+
         builder.HasMany(b => b.ContractContexts)
             .WithOne()
             .HasForeignKey(b => b.ContractId)

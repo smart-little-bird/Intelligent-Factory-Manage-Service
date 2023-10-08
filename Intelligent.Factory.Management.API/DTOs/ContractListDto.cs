@@ -16,14 +16,14 @@ public class ContractListPageDto
 public class ContractListDto
 {
     public int ContractId { get; set; }
-    
-    public string ContractNo { get;  set; }
+
+    public string ContractNo { get; set; }
 
     public string ClientName { get; set; }
-    
+
     public DateTime ShipDateTime { get; set; }
 
     public string ShipType { get; set; }
-    
+
     public int TotalPrice { get; set; }
 }

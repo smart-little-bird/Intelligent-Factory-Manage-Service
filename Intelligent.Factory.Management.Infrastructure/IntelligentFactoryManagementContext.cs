@@ -45,7 +45,7 @@ public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
 
         modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
         modelBuilder.ApplyConfiguration(new ProductItemEntityTypeConfiguration());
-        
+
         modelBuilder.ApplyConfiguration(new ContractEntityTypeConfiguration());
         modelBuilder.ApplyConfiguration(new ContractContextEntityTypeConfiguration());
     }

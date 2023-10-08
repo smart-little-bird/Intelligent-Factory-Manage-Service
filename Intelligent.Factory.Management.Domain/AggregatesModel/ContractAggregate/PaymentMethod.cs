@@ -1,4 +1,5 @@
 
+using System.Text.Json;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using Intelligent.Factory.Management.Domain.SeedWork;
 
@@ -10,7 +11,7 @@ public class PaymentMethod : ValueObject
     {
     }
 
-    public PaymentMethod(PaymentType paymentType,string payPercentJson):this()
+    public PaymentMethod(PaymentType paymentType, string payPercentJson) : this()
     {
         PaymentType = paymentType;
         PayPercentJson = payPercentJson;
@@ -19,6 +20,8 @@ public class PaymentMethod : ValueObject
     public PaymentType PaymentType { get; set; }
 
     public string PayPercentJson { get; set; }
+
+    public IEnumerable<int>? PayPercents =>JsonSerializer.Deserialize<IEnumerable<int>>(PayPercentJson);
 
     protected override IEnumerable<object> GetEqualityComponents()
     {

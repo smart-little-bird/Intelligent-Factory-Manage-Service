@@ -102,18 +102,19 @@ _# Intelligent-Factory-Manage-Service
 
 ## Contract Core Domain
 ### Create Contract Request DTO
-| 字段                          | 类型                      | 备注          | 是否在table显示   | 是否form提交|
-|-----------------------------|-------------------------|-------------|--------------|------------|
-| ClientId                    | int                     | 客户Id        |              | 是        |
-| ClientName                  | string                  | 客户名称        |              | 是        |
-| Phone                       | string                  | 客户电话        |              | 是        |
-| BankAccount                 | int                     | Id          |              | 是        |
-| Street                      | string                  | 客户地址街道      |              | 是        |
-| City                        | string                  | 客户地址城市      |              | 是        |
-| Province                    | string                  | 客户地址省份      |              | 是        |
-| ContractItems               | [ContractItemDto]       | 合同明细集合      |              | 是        |
-| ContractPayMethod           | ContractPayMethod       | 付款方式        |              | 是        |
-| ContractShippingInfo        | ContractShippingInfoDto | 合同配送信息      |              | 是        |
+| 字段                   | 类型                      | 备注         | 是否在table显示 | 是否form提交|
+|----------------------|-------------------------|------------|------------|------------|
+| ClientId             | int                     | 客户Id       |            | 是        |
+| ClientName           | string                  | 客户名称       |            | 是        |
+| Phone                | string                  | 客户电话       |            | 是        |
+| BankAccount          | int                     | Id         |            | 是        |
+| Street               | string                  | 客户地址街道     |            | 是        |
+| City                 | string                  | 客户地址城市     |            | 是        |
+| Province             | string                  | 客户地址省份     |            | 是        |
+| IsCombineFax         | bool                    | 是否含税       |            | 是        |
+| ContractItems        | [ContractItemDto]       | 合同明细集合     |            | 是        |
+| ContractPayMethod    | ContractPayMethod       | 付款方式       |            | 是        |
+| ContractShippingInfo | ContractShippingInfoDto | 合同配送信息     |            | 是        |
 #### ContractItemDto DTO
 | 字段                 | 类型        | 备注           | 是否在table显示 | 是否form提交    |
 |---------------------|-----------|--------------|------------|-------------|

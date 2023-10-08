@@ -52,6 +52,11 @@ public class Contract : Entity, IAggregateRoot
     public LogisticsInfo LogisticsInfo { get; set; }
 
     /// <summary>
+    /// 税务消息
+    /// </summary>
+    public FaxInfo FaxInfo { get; set; }
+
+    /// <summary>
     /// 
     /// </summary>
     /// <param name="clientId"></param>
@@ -61,8 +66,6 @@ public class Contract : Entity, IAggregateRoot
     /// <param name="street"></param>
     /// <param name="city"></param>
     /// <param name="province"></param>
-
-
     public void BingClient(int clientId,
         string clientName, string phone,
         string bankAccount, string street, string city, string province)
@@ -83,7 +86,12 @@ public class Contract : Entity, IAggregateRoot
 
     public void InitLogisticsInfo(DateTime shipDateTime, string shipType, string logisticsUndertaker)
     {
-        this.LogisticsInfo = new LogisticsInfo(shipDateTime, shipType, logisticsUndertaker);
+        LogisticsInfo = new LogisticsInfo(shipDateTime, shipType, logisticsUndertaker);
+    }
+
+    public void AddFaxContext(bool isCombineFax)
+    {
+        FaxInfo = new FaxInfo(isCombineFax, isCombineFax ? 13 : 0);
     }
 
     public void DeterminePaymentMethod(PaymentType paymentType, List<int>? payPercent)

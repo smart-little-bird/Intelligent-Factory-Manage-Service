@@ -18,6 +18,9 @@ public class ContractRepository : IContractRepository
     public async Task<Contract> GetAsync(int id)
     {
         return (await _context.Contracts.Include(t => t.ContractContexts)
+            .Include(t => t.LogisticsInfo)
+            .Include(t => t.PaymentMethod)
+            .Include(t => t.FaxInfo)
             .FirstOrDefaultAsync(p => p.Id == id))!;
     }
 

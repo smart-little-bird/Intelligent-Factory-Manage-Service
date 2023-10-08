@@ -4,7 +4,7 @@ namespace Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregat
 
 public class ContractContextProperty : ValueObject
 {
-    
+
     private ContractContextProperty()
     {
     }

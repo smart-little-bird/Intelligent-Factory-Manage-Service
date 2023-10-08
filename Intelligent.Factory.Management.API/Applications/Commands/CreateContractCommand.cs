@@ -6,12 +6,13 @@ namespace Intelligent.Factory.Management.API.Applications.Commands;
 
 public class CreateContractCommand : IRequest<int>
 {
-    public CreateContractCommand()
+    public CreateContractCommand(bool isCombineFax)
     {
+        IsCombineFax = isCombineFax;
     }
 
     public CreateContractCommand(int clientId, string clientName, string phone, string bankAccount, string street,
-        string city, string province) : this()
+        string city, string province, bool isCombineFax) : this(isCombineFax)
     {
         ClientId = clientId;
         ClientName = clientName;
@@ -20,10 +21,13 @@ public class CreateContractCommand : IRequest<int>
         Street = street;
         City = city;
         Province = province;
+        IsCombineFax = isCombineFax;
         ContractItems = new List<ContractItemDto>();
     }
 
     public int ClientId { get; set; }
+
+    public bool IsCombineFax { get; set; }
 
     public string ClientName { get; set; }
 
@@ -120,6 +124,7 @@ public class CreateContractCommandHandler : IRequestHandler<CreateContractComman
         contract.DeterminePaymentMethod(request.ContractPayMethod.PaymentType, request.ContractPayMethod.PayPercents);
         contract.InitLogisticsInfo(request.ContractShippingInfo.ShipDateTime, request.ContractShippingInfo.ShipType,
             request.ContractShippingInfo.LogisticsUndertaker);
+        contract.AddFaxContext(request.IsCombineFax);
         foreach (var itemDto in request.ContractItems)
         {
             contract.AddContractContext(itemDto.ProductName, itemDto.Material, itemDto.Unit, itemDto.UnitPrice,
