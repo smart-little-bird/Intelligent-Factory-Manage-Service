@@ -57,9 +57,9 @@ public class ContractController : CommonControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     [HttpGet("{id:int}")]
-    public Task<IActionResult> GetAsync([FromRoute] int id)
+    public async Task<IActionResult> GetAsync([FromRoute] int id)
     {
-        var result = _contractQueries.GetAsync(id);
-        return Task.FromResult(Succeed(result, StatusCodes.Status200OK));
+        var result =await _contractQueries.GetAsync(id);
+        return Succeed(result, StatusCodes.Status200OK);
     }
 }

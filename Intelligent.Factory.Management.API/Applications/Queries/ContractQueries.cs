@@ -8,13 +8,15 @@ public class ContractQueries : IContractQueries
 {
     private readonly IContractRepository _contractRepository;
 
+    private readonly IProductQueries _productQueries;
+
     private readonly IMapper _mapper;
 
-
-    public ContractQueries(IContractRepository contractRepository, IMapper mapper)
+    public ContractQueries(IContractRepository contractRepository, IMapper mapper, IProductQueries productQueries)
     {
         _contractRepository = contractRepository;
         _mapper = mapper;
+        _productQueries = productQueries;
     }
 
     public async Task<IEnumerable<ContractListDto>> GetContractListAsync(int pageIndex, int pageSize)
@@ -29,9 +31,17 @@ public class ContractQueries : IContractQueries
         return await _contractRepository.GetAccount();
     }
 
-    public IAsyncEnumerable<ContractDetailDto> GetAsync(int id)
+    public async Task<ContractDetailDto> GetAsync(int id)
     {
-        throw new NotImplementedException();
+        var contract = await _contractRepository.GetAsync(id);
+        var contractDetailDto= _mapper.Map<ContractDetailDto>(contract);
+        if (contractDetailDto.ContractContextDetailDtos.All(T => T.IsIndependent)) return contractDetailDto;
+        {
+            var contractContextDetailDto= contractDetailDto.ContractContextDetailDtos.First(T => T.IsIndependent);
+            var productDetailDto= await _productQueries.GetAsync(contractContextDetailDto.ProductId);
+            contractDetailDto.TechnologyStandard = productDetailDto.EntryCriteria;
+        }
+        return contractDetailDto;
     }
 
 }

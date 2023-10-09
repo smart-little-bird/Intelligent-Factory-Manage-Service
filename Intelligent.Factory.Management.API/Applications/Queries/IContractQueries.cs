@@ -7,6 +7,6 @@ public interface IContractQueries
     Task<IEnumerable<ContractListDto>> GetContractListAsync(int pageIndex, int pageSize);
 
     Task<int> GetAccountAsync();
-
-    IAsyncEnumerable<ContractDetailDto> GetAsync(int id);
+    
+    Task<ContractDetailDto> GetAsync(int id);
 }

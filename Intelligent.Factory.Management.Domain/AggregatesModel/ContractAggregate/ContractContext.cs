@@ -23,7 +23,7 @@ public class ContractContext : Entity
         ContractContextProperty = new ContractContextProperty(isIndependent, productId);
     }
 
-    public string ProductName { get; private set; }
+    public string ProductName { get;  set; }
 
     /// <summary>
     /// 合同内容属性

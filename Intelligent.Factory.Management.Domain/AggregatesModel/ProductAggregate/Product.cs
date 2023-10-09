@@ -13,6 +13,9 @@ public class Product : Entity, IAggregateRoot
 
     public string Description { get; set; }
 
+    /// <summary>
+    /// 入口标准 ZY ZC
+    /// </summary>
     public string EntryCriteria { get; set; }
 
     private readonly List<ProductItem> _productItems;

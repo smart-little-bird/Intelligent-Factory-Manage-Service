@@ -1,5 +1,4 @@
 using System.Runtime.Serialization;
-using Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 
 namespace Intelligent.Factory.Management.API.DTOs;
@@ -12,7 +11,7 @@ public class ContractDetailDto
     }
 
     public ContractDetailDto(int id, string contractNo, string phone, string clientName, DateTime shipDateTime,
-        string shipType, int totalPrice, PaymentType paymentType, IEnumerable<int> percets,
+        string shipType, int totalPrice, PaymentType paymentType, IEnumerable<int> percents,
         IEnumerable<ContractContextDetailDto> contractContextDetailDtos) : this()
     {
         Id = id;
@@ -23,7 +22,7 @@ public class ContractDetailDto
         ShipType = shipType;
         TotalPrice = totalPrice;
         PaymentType = paymentType;
-        Percets = percets;
+        Percents = percents;
         ContractContextDetailDtos = contractContextDetailDtos;
     }
 
@@ -43,19 +42,19 @@ public class ContractDetailDto
 
     public PaymentType PaymentType { get; set; }
 
-    public IEnumerable<int> Percets { get; set; }
+    public IEnumerable<int> Percents { get; set; }
 
     public IEnumerable<ContractContextDetailDto> ContractContextDetailDtos { get; set; }
 
     public FaxContextDto FaxContext { get; set; }
+    /// <summary>
+    /// 技术标准
+    /// </summary>
+    public string TechnologyStandard { get; set; }
+
 }
 
-public record FaxContextDto
-{
-    public bool IsCombineFax { get; init; }
-
-    public string TaxRate { get; init; }
-}
+public record FaxContextDto(bool IsCombineFax, string TaxRate);
 
 public class ContractContextDetailDto
 {

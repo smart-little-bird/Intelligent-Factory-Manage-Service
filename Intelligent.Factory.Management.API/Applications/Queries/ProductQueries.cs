@@ -34,4 +34,10 @@ public class ProductQueries : IProductQueries
         var products = await _productRepository.GetListAsync();
         return products.Select(t => _mapper.Map<ProductListDto>(t));
     }
+
+    public async Task<ProductListDto> GetAsync(int id)
+    {
+        var product = await _productRepository.GetAsync(id);
+         return _mapper.Map<ProductListDto>(product);
+    }
 }
