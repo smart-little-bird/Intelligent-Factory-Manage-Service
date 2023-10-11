@@ -136,3 +136,17 @@ _# Intelligent-Factory-Manage-Service
 | ShipDateTime        | DateTime | 交货日期      |            | 是          |
 | ShipType            | string   | 交货方式       |            | 是          |
 | LogisticsUndertaker | string   | 物流承担方      |            | 是          |
+### getList ContractListPageDto 
+| 字段               | 类型                           | 备注         | 是否在table显示 | 是否form提交    |
+|------------------|------------------------------|------------|------------|-------------|
+| ContractListDtos | IEnumerable<ContractListDto> | 合同明细集合     |            | 是       |
+| Page             | PageDto                      | 页码对象       |            | 是        |
+####  ClientListDto 
+| 字段                  | 类型         | 备注         | 是否在table显示 | 是否form提交 |
+|---------------------|------------|------------|------------|-------------|
+| ContractId          | int        | 合同ID       |            | 是          |
+| ContractNo          | string     | 合同编号       |            | 是          |
+| ClientName          | string     | 客户名称       |            | 是          |
+| ShipDateTime        | DateTime   | 交货日期       |            | 是          |
+| ShipType            | string     | 货运方式       |            | 是          |
+| TotalPrice          | int        | 总价         |            | 是          |

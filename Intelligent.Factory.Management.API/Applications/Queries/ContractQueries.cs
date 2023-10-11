@@ -7,9 +7,9 @@ namespace Intelligent.Factory.Management.API.Applications.Queries;
 public class ContractQueries : IContractQueries
 {
     private readonly IContractRepository _contractRepository;
-
+    
     private readonly IProductQueries _productQueries;
-
+    
     private readonly IMapper _mapper;
 
     public ContractQueries(IContractRepository contractRepository, IMapper mapper, IProductQueries productQueries)

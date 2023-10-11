@@ -62,4 +62,19 @@ public class ContractController : CommonControllerBase
         var result =await _contractQueries.GetAsync(id);
         return Succeed(result, StatusCodes.Status200OK);
     }
+    
+    /// <summary>
+    /// 完成
+    /// </summary>
+    /// <param name="id"></param>
+    /// <returns></returns>
+    [ProducesResponseType(typeof(int), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpPut("{id:int}")]
+    public async Task<IActionResult> DownAsync([FromRoute] int id)
+    {
+        var result = await _mediator.Send(new DownContractCommand(id));
+        return Succeed(result, StatusCodes.Status201Created);
+    }
 }

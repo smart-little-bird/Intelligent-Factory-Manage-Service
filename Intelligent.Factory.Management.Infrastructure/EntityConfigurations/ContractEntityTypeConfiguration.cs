@@ -29,7 +29,11 @@ public class ContractEntityTypeConfiguration : IEntityTypeConfiguration<Contract
         builder.Property(b => b.ContractNo)
             .UsePropertyAccessMode(PropertyAccessMode.Field)
             .IsRequired();
-
+        
+        builder.Property(b => b.ContractStatus)
+            .UsePropertyAccessMode(PropertyAccessMode.Field)
+            .IsRequired();
+        
         builder
             .OwnsOne(o => o.PaymentMethod, a =>
             {

@@ -9,9 +9,12 @@ public class Contract : Entity, IAggregateRoot
 {
     public Contract(string contractNo)
     {
+        ContractStatus = ContractStatus.Init;
         ContractNo = contractNo;
         _contractContexts = new List<ContractContext>();
     }
+
+    public ContractStatus ContractStatus { get; set; }
 
     /// <summary>
     /// 合同编号
@@ -97,5 +100,10 @@ public class Contract : Entity, IAggregateRoot
     public void DeterminePaymentMethod(PaymentType paymentType, List<int>? payPercent)
     {
         PaymentMethod = new PaymentMethod(paymentType, JsonSerializer.Serialize(payPercent));
+    }
+
+    public void DownContract()
+    {
+        this.ContractStatus = ContractStatus.Finish;
     }
 }
