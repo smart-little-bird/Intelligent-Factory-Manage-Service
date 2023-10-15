@@ -1,0 +1,10 @@
+﻿@Intelligent.Factory.Management.API_HostAddress = http://localhost:5037
+
+POST {{Intelligent.Factory.Management.API_HostAddress}}/product
+Content-Type: application/json
+
+{
+  //CreateProductCommand
+}
+
+###

@@ -6,21 +6,13 @@ namespace Intelligent.Factory.Management.API.Applications.Commands;
 
 public class CreateContractCommand : IRequest<int>
 {
-    public CreateContractCommand(bool isCombineFax)
-    {
-        IsCombineFax = isCombineFax;
-    }
-
-    public CreateContractCommand(int clientId, string clientName, string phone, string bankAccount, string street,
-        string city, string province, bool isCombineFax) : this(isCombineFax)
+    public CreateContractCommand(int clientId)
     {
         ClientId = clientId;
-        ClientName = clientName;
-        Phone = phone;
-        BankAccount = bankAccount;
-        Street = street;
-        City = city;
-        Province = province;
+    }
+    public CreateContractCommand(int clientId, bool isCombineFax) : this(clientId)
+    {
+        ClientId = clientId;
         IsCombineFax = isCombineFax;
         ContractItems = new List<ContractItemDto>();
     }
@@ -28,18 +20,6 @@ public class CreateContractCommand : IRequest<int>
     public int ClientId { get; set; }
 
     public bool IsCombineFax { get; set; }
-
-    public string ClientName { get; set; }
-
-    public string Phone { get; set; }
-
-    public string BankAccount { get; set; }
-
-    public string Street { get; set; }
-
-    public string City { get; set; }
-
-    public string Province { get; set; }
 
     public IEnumerable<ContractItemDto> ContractItems { get; set; }
 

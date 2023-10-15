@@ -20,10 +20,17 @@ public class ClientEntityTypeConfiguration : IEntityTypeConfiguration<Client>
 
         builder.Property(b => b.ClientType).IsRequired();
 
-        builder.HasOne(b => b.ClientAgent)
-            .WithMany()
-            .HasForeignKey("ClientAgentId")
-            .OnDelete(DeleteBehavior.Cascade);
+        //builder.HasOne(b => b.ClientAgent)
+        //    .WithMany()
+        //    .HasForeignKey("ClientAgentId")
+        //    .OnDelete(DeleteBehavior.Cascade);
+
+        builder
+        .OwnsOne(o => o.ClientAgent, a =>
+        {
+            a.Property(p => p.Name).HasColumnName("ClientAgentName");
+            a.Property(p => p.PhoneNumber).HasColumnName("ClientAgentPhoneNumber");
+        });
 
         builder
             .OwnsOne(o => o.Address, a =>
