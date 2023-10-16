@@ -8,7 +8,7 @@ public class ContractListAutoMapperProfile : AutoMapper.Profile
     public ContractListAutoMapperProfile()
     {
         CreateMap<Contract, ContractListDto>()
-            .ForMember(d => d.ContractId, o => o.MapFrom(s => s.Id))
+            .ForMember(d => d.Id, o => o.MapFrom(s => s.Id))
             .ForMember(d => d.ContractNo, o => o.MapFrom(s => s.ContractNo))
             .ForMember(d => d.ClientName, o => o.MapFrom(s => s.ClientName))
             .ForMember(d => d.ShipType, o => o.MapFrom(s => s.LogisticsInfo.ShipType))

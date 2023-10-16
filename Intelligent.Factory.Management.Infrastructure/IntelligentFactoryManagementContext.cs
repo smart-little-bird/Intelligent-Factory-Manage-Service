@@ -17,7 +17,7 @@ public sealed class IntelligentFactoryManagementContext : DbContext, IUnitOfWork
 
     public DbSet<Product> Products { get; set; }
 
-    public DbSet<Contract> Contracts { get; set; }
+    public DbSet<Contract?> Contracts { get; set; }
 
     private readonly IMediator? _mediator;
 

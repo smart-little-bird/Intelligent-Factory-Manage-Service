@@ -26,6 +26,7 @@ public class ContractDetailDto
         ContractContextDetailDtos = contractContextDetailDtos;
     }
 
+    // todo Add the path to record the printer PDF path
     public int Id { get; set; }
 
     public string ContractNo { get; set; }

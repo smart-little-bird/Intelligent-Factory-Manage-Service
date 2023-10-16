@@ -15,7 +15,7 @@ public class ContractListPageDto
 
 public class ContractListDto
 {
-    public int ContractId { get; set; }
+    public int Id { get; set; }
 
     public string ContractNo { get; set; }
 

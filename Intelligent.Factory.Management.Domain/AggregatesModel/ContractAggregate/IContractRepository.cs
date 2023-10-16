@@ -4,11 +4,11 @@ namespace Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregat
 
 public interface IContractRepository : IRepository<Contract>
 {
-    Task<Contract> GetAsync(int id);
+    Task<Contract?> GetAsync(int id);
 
-    Contract Add(Contract contract);
+    Contract? Add(Contract? contract);
 
-    Contract Update(Contract contract);
+    Contract? Update(Contract? contract);
 
     Task<List<Contract>> GetListWithPageAsync(int pageIndex, int pageSize);
 

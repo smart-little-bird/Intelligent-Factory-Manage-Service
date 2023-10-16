@@ -15,22 +15,26 @@ public class ContractRepository : IContractRepository
 
     public IUnitOfWork UnitOfWork => _context;
 
-    public async Task<Contract> GetAsync(int id)
+    public async Task<Contract?> GetAsync(int id)
     {
-        return (await _context.Contracts.Include(t => t.ContractContexts)
-            .ThenInclude(t => t.ContractContextProperty)
-            .Include(t => t.LogisticsInfo)
-            .Include(t => t.PaymentMethod)
-            .Include(t => t.FaxInfo)
-            .FirstOrDefaultAsync(p => p.Id == id))!;
+        if (_context.Contracts.FirstAsync(t => t.Id == id) != null)
+        {
+            return await _context.Contracts.Include(t => t!.ContractContexts)
+                .ThenInclude(t => t.ContractContextProperty)
+                .Include(t => t!.LogisticsInfo)
+                .Include(t => t!.PaymentMethod)
+                .Include(t => t!.FaxInfo)
+                .FirstAsync(p => p!.Id == id);
+        }
+        return null;
     }
 
-    public Contract Add(Contract contract)
+    public Contract? Add(Contract? contract)
     {
         return _context.Contracts.Add(contract).Entity;
     }
 
-    public Contract Update(Contract contract)
+    public Contract? Update(Contract? contract)
     {
         return _context.Contracts.Update(contract).Entity;
     }

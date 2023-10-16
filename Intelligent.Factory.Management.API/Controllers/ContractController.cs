@@ -63,6 +63,17 @@ public class ContractController : CommonControllerBase
         return Succeed(result, StatusCodes.Status200OK);
     }
     
+    [ProducesResponseType(typeof(int), StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    [HttpPost("{id:int}")]
+    public async Task<IActionResult> UpdateAsync([FromBody] UpdateContractCommand updateContractCommand)
+    {
+        var result = await _mediator.Send(updateContractCommand);
+        _logger.LogInformation($"update the product succeed: id{result}");
+        return Succeed(result, StatusCodes.Status201Created);
+    }
+
     /// <summary>
     /// 完成
     /// </summary>
@@ -71,7 +82,7 @@ public class ContractController : CommonControllerBase
     [ProducesResponseType(typeof(int), StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-    [HttpPut("{id:int}")]
+    [HttpPatch("{id:int}")]
     public async Task<IActionResult> DownAsync([FromRoute] int id)
     {
         var result = await _mediator.Send(new DownContractCommand(id));

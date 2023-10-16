@@ -34,6 +34,7 @@ public class ContractQueries : IContractQueries
     public async Task<ContractDetailDto> GetAsync(int id)
     {
         var contract = await _contractRepository.GetAsync(id);
+        if (contract == null) throw new Exception($"不存在id为{id}的合同");
         var contractDetailDto= _mapper.Map<ContractDetailDto>(contract);
         if (contractDetailDto.ContractContextDetailDtos.All(T => T.IsIndependent)) return contractDetailDto;
         {

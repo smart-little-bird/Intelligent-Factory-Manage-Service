@@ -17,7 +17,8 @@ public class DownContractCommand: IRequest<int>
     public int Id { get; set; }
 }
 
-public class DownContractCommandHandler : IRequestHandler<DownContractCommand, int>
+public class DownContractCommandHandler : 
+    IRequestHandler<DownContractCommand, int>
 {
     private readonly IContractRepository _contractRepository;
     
@@ -32,12 +33,12 @@ public class DownContractCommandHandler : IRequestHandler<DownContractCommand, i
     public async Task<int> Handle(DownContractCommand request, CancellationToken cancellationToken)
     {
         var contract = await _contractRepository.GetAsync(request.Id);
+        if (contract == null) throw new Exception($"不存在id为 {request.Id} 的合同");
         contract.DownContract();
         await _contractRepository.UnitOfWork
             .SaveEntitiesAsync(cancellationToken);
-        // todo add the order logic
         
+        // todo add the order logic
         return contract.Id;
-
     }
 }

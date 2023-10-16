@@ -1,3 +1,4 @@
+using Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using MediatR;
@@ -11,16 +12,9 @@ public class CreateContractCommand : IRequest<int>
         IsCombineFax = isCombineFax;
     }
 
-    public CreateContractCommand(int clientId, string clientName, string phone, string bankAccount, string street,
-        string city, string province, bool isCombineFax) : this(isCombineFax)
+    public CreateContractCommand(int clientId, bool isCombineFax) : this(isCombineFax)
     {
         ClientId = clientId;
-        ClientName = clientName;
-        Phone = phone;
-        BankAccount = bankAccount;
-        Street = street;
-        City = city;
-        Province = province;
         IsCombineFax = isCombineFax;
         ContractItems = new List<ContractItemDto>();
     }
@@ -28,18 +22,6 @@ public class CreateContractCommand : IRequest<int>
     public int ClientId { get; set; }
 
     public bool IsCombineFax { get; set; }
-
-    public string ClientName { get; set; }
-
-    public string Phone { get; set; }
-
-    public string BankAccount { get; set; }
-
-    public string Street { get; set; }
-
-    public string City { get; set; }
-
-    public string Province { get; set; }
 
     public IEnumerable<ContractItemDto> ContractItems { get; set; }
 
@@ -107,9 +89,12 @@ public class CreateContractCommandHandler : IRequestHandler<CreateContractComman
 {
     private readonly IContractRepository _contractRepository;
 
-    public CreateContractCommandHandler(IContractRepository contractRepository)
+    private readonly IClientRepository _clientRepository;
+
+    public CreateContractCommandHandler(IContractRepository contractRepository, IClientRepository clientRepository)
     {
         _contractRepository = contractRepository;
+        _clientRepository = clientRepository;
     }
 
     public async Task<int> Handle(CreateContractCommand request, CancellationToken cancellationToken)
@@ -118,8 +103,10 @@ public class CreateContractCommandHandler : IRequestHandler<CreateContractComman
             Convert.ToInt16(DateTime.Now.ToString("mm")) % 5);
 
         var contract = new Contract(contractNo);
-        contract.BingClient(request.ClientId, request.ClientName, request.Phone, request.BankAccount, request.Street,
-            request.City, request.Province);
+        var client = await _clientRepository.FindByIdAsync(request.ClientId);
+        contract.BingClient(request.ClientId, client!.Name, client.ContactNumber, client.Bank.BankAccount,
+            client.Address.Street,
+            client.Address.City, client.Address.Province);
 
         contract.DeterminePaymentMethod(request.ContractPayMethod.PaymentType, request.ContractPayMethod.PayPercents);
         contract.InitLogisticsInfo(request.ContractShippingInfo.ShipDateTime, request.ContractShippingInfo.ShipType,
@@ -135,6 +122,9 @@ public class CreateContractCommandHandler : IRequestHandler<CreateContractComman
 
         await _contractRepository.UnitOfWork
             .SaveEntitiesAsync(cancellationToken);
+
+        // todo add the  service to generator the pdf
+
         return result.Id;
     }
 }
