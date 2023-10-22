@@ -19,45 +19,46 @@ public class UpdateContractCommand : IRequest<int>
     [FromRoute] public int Id { get; set; }
 
     public IEnumerable<UpdateContractItemDto> UpdateContractItemDtos { get; set; }
+    
+    public record UpdateContractItemDto
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// 材质
+        /// </summary>
+        public string Material { get; set; }
+
+        /// <summary>
+        /// 单位
+        /// </summary>
+        public string Unit { get; set; }
+
+        /// <summary>
+        /// 单价
+        /// </summary>
+        public int UnitPrice { get; set; }
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public int Amount { get; set; }
+
+        /// <summary>
+        /// 是否为独立的产品
+        /// </summary>
+        public bool IsIndependent { get; set; }
+
+        /// <summary>
+        /// 绑定产品Id
+        /// </summary>
+        public int ProductId { get; set; }
+    }
 }
 
-public record UpdateContractItemDto
-{
-    /// <summary>
-    /// 
-    /// </summary>
-    public string ProductName { get; set; }
-
-    /// <summary>
-    /// 材质
-    /// </summary>
-    public string Material { get; set; }
-
-    /// <summary>
-    /// 单位
-    /// </summary>
-    public string Unit { get; set; }
-
-    /// <summary>
-    /// 单价
-    /// </summary>
-    public int UnitPrice { get; set; }
-
-    /// <summary>
-    /// 数量
-    /// </summary>
-    public int Amount { get; set; }
-
-    /// <summary>
-    /// 是否为独立的产品
-    /// </summary>
-    public bool IsIndependent { get; set; }
-
-    /// <summary>
-    /// 绑定产品Id
-    /// </summary>
-    public int ProductId { get; set; }
-}
 
 public class UpdateContractCommandHandler : IRequestHandler<UpdateContractCommand, int>
 {

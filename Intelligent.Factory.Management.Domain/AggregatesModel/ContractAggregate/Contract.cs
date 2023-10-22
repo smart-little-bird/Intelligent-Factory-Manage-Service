@@ -109,6 +109,6 @@ public class Contract : Entity, IAggregateRoot
 
     public void DownContract()
     {
-        this.ContractStatus = ContractStatus.Finish;
+        ContractStatus = ContractStatus.Finish;
     }
 }
