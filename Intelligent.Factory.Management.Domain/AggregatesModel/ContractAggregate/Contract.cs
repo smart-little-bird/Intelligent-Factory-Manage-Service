@@ -79,6 +79,11 @@ public class Contract : Entity, IAggregateRoot
         AddDomainEvent(new ContractBindClientDomainEvent(clientId, clientName, phone, bankAccount, street, city, province));
     }
 
+    public void RemoveContractContexts()
+    {
+        _contractContexts.Clear();
+    }
+
     public void AddContractContext(string productName, string material, string unit,
         int unitPrice, int amount, bool isIndependent, int productId)
     {

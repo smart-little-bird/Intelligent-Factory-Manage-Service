@@ -33,7 +33,7 @@ public class DownContractCommandHandler :
     public async Task<int> Handle(DownContractCommand request, CancellationToken cancellationToken)
     {
         var contract = await _contractRepository.GetAsync(request.Id);
-        if (contract == null) throw new Exception($"不存在id为 {request.Id} 的合同");
+        if (contract is null) throw new Exception($"不存在id为 {request.Id} 的合同");
         contract.DownContract();
         await _contractRepository.UnitOfWork
             .SaveEntitiesAsync(cancellationToken);
