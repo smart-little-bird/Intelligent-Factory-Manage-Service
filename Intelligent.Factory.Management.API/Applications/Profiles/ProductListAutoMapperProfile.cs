@@ -10,7 +10,8 @@ public class ProductListAutoMapperProfile : AutoMapper.Profile
         CreateMap<Product, ProductListDto>()
             .ForMember(d => d.Id, o => o.MapFrom(s => s.Id))
             .ForMember(d => d.Description, o => o.MapFrom(s => s.Description))
-            .ForMember(d => d.EntryCriteria, o => o.MapFrom(s => s.EntryCriteria));
+            .ForMember(d => d.EntryCriteria, o => o.MapFrom(s => s.EntryCriteria))
+            .ForMember(d => d.ProductListItemDtos, o => o.MapFrom(s => s.ProductItems));
 
         CreateMap<ProductItem, ProductListItemDto>()
             .ForMember(d => d.Id, o => o.MapFrom(s => s.Id))

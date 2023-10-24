@@ -6,19 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d4f95a-acc9-40f4-9722-16aedeba19a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ContractContextAutoMapperProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Assistance/Services/FileBuilder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Assistance/Services/IFileBuilder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ContractDetailAutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ContractDetailAutoMapperProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ContractQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ContractQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IContractQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IContractQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IProductQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IProductQueries.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ContractController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/ContractContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ContractAggregate/ContractContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/Product.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ProductAggregate/Product.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ContractRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ContractRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.System.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.System.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +22,11 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2194f61e2ea7415786eda6b9772bf3b31cbb20/2c/2487c8a0/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6eb4404bd9b845708371aece5dce0d7940200/69/ffbc0a5a/MapperConfigurationExpression.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/77b653686493497792f85e2d7799f6d911000/cf/069f2f6c/IRequestHandler`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/d23ddb881ebc4d4290991a839764b5829710/74/2031bf7b/ConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea9458842aad47e8a05443837c438552a24ab0/e4/480e0a21/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea9458842aad47e8a05443837c438552a24ab0/ea/d5ade092/ManualResetValueTaskSourceCore`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -248,6 +244,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Applications\Queries\ProductQueries.cs" initialLine="33" containingFunctionPresentation="method 'GetProductListAsync'">
+            <startOffsets>
+              <option value="1122" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1177" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

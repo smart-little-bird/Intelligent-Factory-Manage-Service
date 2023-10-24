@@ -40,7 +40,7 @@ public class ProductController : CommonControllerBase
     public async Task<IActionResult> GetListAsync([FromQuery] Page page)
     {
         var result = await _productQueries.GetProductListAsync(page.PageIndex, page.PageSize);
-        return Succeed(result, StatusCodes.Status201Created);
+        return Succeed(result, StatusCodes.Status200OK);
     }
 
     [ProducesResponseType(typeof(int), StatusCodes.Status200OK)]

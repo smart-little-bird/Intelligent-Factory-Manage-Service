@@ -25,12 +25,12 @@ public class ProductListDto
     {
     }
 
-    public ProductListDto(int id, string description, string entryCriteria, IEnumerable<ProductListItemDto> productItemDtos) : this()
+    public ProductListDto(int id, string description, string entryCriteria, IEnumerable<ProductListItemDto> productListItemDtos) : this()
     {
         Id = id;
         Description = description;
         EntryCriteria = entryCriteria;
-        ProductItemDtos = productItemDtos;
+        ProductListItemDtos = productListItemDtos;
     }
 
     public int Id { get; set; }
@@ -39,7 +39,7 @@ public class ProductListDto
 
     public string EntryCriteria { get; set; }
 
-    public IEnumerable<ProductListItemDto> ProductItemDtos { get; set; }
+    public IEnumerable<ProductListItemDto> ProductListItemDtos { get; set; }
 }
 
 public class ProductListItemDto
