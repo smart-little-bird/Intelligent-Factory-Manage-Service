@@ -3,13 +3,13 @@ using MediatR;
 
 namespace Intelligent.Factory.Management.API.Applications.Commands;
 
-public class DownContractCommand: IRequest<int>
+public class DownContractCommand : IRequest<int>
 {
     public DownContractCommand()
     {
     }
 
-    public DownContractCommand(int id):this()
+    public DownContractCommand(int id) : this()
     {
         Id = id;
     }
@@ -17,11 +17,11 @@ public class DownContractCommand: IRequest<int>
     public int Id { get; set; }
 }
 
-public class DownContractCommandHandler : 
+public class DownContractCommandHandler :
     IRequestHandler<DownContractCommand, int>
 {
     private readonly IContractRepository _contractRepository;
-    
+
     private readonly IMediator _mediator;
 
     public DownContractCommandHandler(IContractRepository contractRepository, IMediator mediator)
@@ -37,7 +37,7 @@ public class DownContractCommandHandler :
         contract.DownContract();
         await _contractRepository.UnitOfWork
             .SaveEntitiesAsync(cancellationToken);
-        
+
         // todo add the order logic
         return contract.Id;
     }

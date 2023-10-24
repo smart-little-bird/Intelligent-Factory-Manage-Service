@@ -129,7 +129,7 @@ _# Intelligent-Factory-Manage-Service
 | 字段                 | 类型                | 备注         | 是否在table显示 | 是否form提交 |
 |---------------------|-------------------|------------|-----------|-------------|
 | PaymentType         | PaymentType[Enum] | 支付方式       |         | 是          |
-| PayPercents         | List<int>?        | 支付百分比集合    |         | 是          |、
+| PayPercents         | List<int>?        | 支付百分比集合    |         | 是        |
 #### ContractShippingInfoDto DTO
 | 字段                 | 类型      | 备注       | 是否在table显示 | 是否form提交 |
 |---------------------|----------|------------|------------|-------------|

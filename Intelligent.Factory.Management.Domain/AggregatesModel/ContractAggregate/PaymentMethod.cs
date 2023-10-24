@@ -21,7 +21,7 @@ public class PaymentMethod : ValueObject
 
     public string PayPercentJson { get; set; }
 
-    public IEnumerable<int>? PayPercents =>JsonSerializer.Deserialize<IEnumerable<int>>(PayPercentJson);
+    public IEnumerable<int>? PayPercents => JsonSerializer.Deserialize<IEnumerable<int>>(PayPercentJson);
 
     protected override IEnumerable<object> GetEqualityComponents()
     {

@@ -52,7 +52,7 @@ public class ClientQueries : IClientQueries
 
         var result = await connection.QueryAsync<dynamic>(
             sql:
-            "  SELECT Client.Id as ID,CLIENTTYPE, Client.Name as NAME,STREET, CITY,PROVINCE,ZIPCODE,TFN,BANKTITLE, BANKACCOUNT,BILLINGTELEPHONE, CONTACTNUMBER, EMAIL, FAX,cA.Name as CLIENTNAME,cA.PhoneNumber as CLIENTPHONE FROM  IntelligentFactoryManagement.client AS Client inner join IntelligentFactoryManagement.clientAgent cA on cA.Id = Client.ClientAgentId");
+            "  SELECT Client.Id as ID,Client.ClientType as CLIENTTYPE, Client.Name as NAME,Client.Street as STREET,Client.City as CITY,Client.Province as PROVINCE,Client.ZipCode as ZIPCODE,TFN,Client.BankTitle as BANKTITLE,Client.BankAccount as BANKACCOUNT,Client.BillingTelephone as BILLINGTELEPHONE,Client.ContactNumber as CONTACTNUMBER,Client.Email as EMAIL,Client.Fax as FAX,cA.Name as CLIENTNAME,cA.PhoneNumber as CLIENTPHONE FROM  intelligent_factory_management.client AS Client inner join intelligent_factory_management.clientAgent cA on cA.Id = Client.ClientAgentId");
         var enumerable = result.ToList();
         if (enumerable.AsList().Count == 0)
             throw new KeyNotFoundException();

@@ -19,7 +19,7 @@ public class UpdateContractCommand : IRequest<int>
     [FromRoute] public int Id { get; set; }
 
     public IEnumerable<UpdateContractItemDto> UpdateContractItemDtos { get; set; }
-    
+
     public record UpdateContractItemDto
     {
         /// <summary>

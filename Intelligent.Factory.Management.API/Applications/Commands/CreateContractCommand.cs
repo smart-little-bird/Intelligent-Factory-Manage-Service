@@ -121,9 +121,9 @@ public class CreateContractCommandHandler : IRequestHandler<CreateContractComman
         var result = _contractRepository.Add(contract);
         await _contractRepository.UnitOfWork
             .SaveEntitiesAsync(cancellationToken);
-        
+
         // todo add the  service to generator the pdf
-        
+
         return result!.Id;
     }
 }

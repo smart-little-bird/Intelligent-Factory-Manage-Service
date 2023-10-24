@@ -27,9 +27,9 @@ public class ClientRepository : IClientRepository
 
     public async Task DeleteAsync(int id)
     {
-        _context.Clients.Remove(
-            (await _context.Clients.SingleOrDefaultAsync(t => t.Id == id))!
-        );
+        var client = await _context.Clients.SingleAsync(t => t.Id == id);
+        _context.Remove(client);
+        await _context.SaveChangesAsync();
     }
 
     public async Task<Client?> FindByIdAsync(int id)

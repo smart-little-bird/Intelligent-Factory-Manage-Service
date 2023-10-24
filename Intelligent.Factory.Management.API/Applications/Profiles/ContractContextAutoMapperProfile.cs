@@ -3,7 +3,7 @@ using Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate;
 
 namespace Intelligent.Factory.Management.API.Applications.Profiles;
 
-public class ContractContextAutoMapperProfile: AutoMapper.Profile
+public class ContractContextAutoMapperProfile : AutoMapper.Profile
 {
     public ContractContextAutoMapperProfile()
     {

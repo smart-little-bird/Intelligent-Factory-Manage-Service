@@ -7,9 +7,9 @@ namespace Intelligent.Factory.Management.API.Applications.Queries;
 public class ContractQueries : IContractQueries
 {
     private readonly IContractRepository _contractRepository;
-    
+
     private readonly IProductQueries _productQueries;
-    
+
     private readonly IMapper _mapper;
 
     public ContractQueries(IContractRepository contractRepository, IMapper mapper, IProductQueries productQueries)
@@ -35,11 +35,11 @@ public class ContractQueries : IContractQueries
     {
         var contract = await _contractRepository.GetAsync(id);
         if (contract == null) throw new Exception($"不存在id为{id}的合同");
-        var contractDetailDto= _mapper.Map<ContractDetailDto>(contract);
+        var contractDetailDto = _mapper.Map<ContractDetailDto>(contract);
         if (contractDetailDto.ContractContextDetailDtos.All(T => T.IsIndependent)) return contractDetailDto;
         {
-            var contractContextDetailDto= contractDetailDto.ContractContextDetailDtos.First(T => T.IsIndependent);
-            var productDetailDto= await _productQueries.GetAsync(contractContextDetailDto.ProductId);
+            var contractContextDetailDto = contractDetailDto.ContractContextDetailDtos.First(T => T.IsIndependent);
+            var productDetailDto = await _productQueries.GetAsync(contractContextDetailDto.ProductId);
             contractDetailDto.TechnologyStandard = productDetailDto.EntryCriteria;
         }
         return contractDetailDto;

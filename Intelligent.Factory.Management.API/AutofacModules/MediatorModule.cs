@@ -17,6 +17,8 @@ public class MediatorModule : Autofac.Module
         // Register all the Command classes (they implement IRequestHandler) in assembly holding the Commands
         builder.RegisterAssemblyTypes(typeof(CreateClientCommand).GetTypeInfo().Assembly)
             .AsClosedTypesOf(typeof(IRequestHandler<,>));
+        builder.RegisterAssemblyTypes(typeof(DeleteClientCommand).GetTypeInfo().Assembly)
+            .AsClosedTypesOf(typeof(IRequestHandler<>));
 
         builder.RegisterAssemblyTypes(typeof(ContractBindClientDomainEvent).GetTypeInfo().Assembly)
             .AsClosedTypesOf(typeof(INotificationHandler<>));
