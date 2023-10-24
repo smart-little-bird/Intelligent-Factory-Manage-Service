@@ -60,7 +60,7 @@ public class ProductController : CommonControllerBase
     public async Task<IActionResult> GetListSimpleAsync()
     {
         var result = await _productQueries.GetProductListAsync();
-        return Succeed(result, StatusCodes.Status201Created);
+        return Succeed(result, StatusCodes.Status200OK);
     }
 
     [ProducesResponseType(StatusCodes.Status200OK)]
