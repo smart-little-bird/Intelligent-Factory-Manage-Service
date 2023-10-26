@@ -6,6 +6,7 @@ namespace Intelligent.Factory.Management.API.DTOs;
 [DataContract]
 public class ContractDetailDto
 {
+
     public ContractDetailDto()
     {
     }

@@ -3,10 +3,6 @@ namespace Intelligent.Factory.Management.API.DTOs;
 
 public class ContractListPageDto
 {
-    public ContractListPageDto()
-    {
-    }
-
     public IEnumerable<ContractListDto> ContractListDtos { get; set; }
 
     public PageDto Page { get; set; }

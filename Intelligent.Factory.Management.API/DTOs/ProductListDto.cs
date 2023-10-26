@@ -14,9 +14,9 @@ public class ProductPageDto
         Page = page;
     }
 
-    private IEnumerable<ProductListDto> ProductListDtos { get; set; }
+    public IEnumerable<ProductListDto> ProductListDtos { get; set; }
 
-    private Page Page { get; set; }
+    public Page Page { get; set; }
 }
 
 public class ProductListDto

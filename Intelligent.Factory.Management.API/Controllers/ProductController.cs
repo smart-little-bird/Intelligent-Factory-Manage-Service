@@ -3,9 +3,7 @@ using Intelligent.Factory.Management.API.Applications.Queries;
 using Intelligent.Factory.Management.API.DTOs;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-
 namespace Intelligent.Factory.Management.API.Controllers;
-
 
 public class ProductController : CommonControllerBase
 {

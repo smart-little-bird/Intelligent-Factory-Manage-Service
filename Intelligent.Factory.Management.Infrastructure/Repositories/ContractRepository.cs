@@ -17,16 +17,12 @@ public class ContractRepository : IContractRepository
 
     public async Task<Contract?> GetAsync(int id)
     {
-        if (_context.Contracts.FirstAsync(t => t.Id == id) != null)
-        {
-            return await _context.Contracts.Include(t => t!.ContractContexts)
-                .ThenInclude(t => t.ContractContextProperty)
-                .Include(t => t!.LogisticsInfo)
-                .Include(t => t!.PaymentMethod)
-                .Include(t => t!.FaxInfo)
-                .FirstAsync(p => p!.Id == id);
-        }
-        return null;
+        return await _context.Contracts.Include(t => t!.ContractContexts)
+            .ThenInclude(t => t.ContractContextProperty)
+            .Include(t => t!.LogisticsInfo)
+            .Include(t => t!.PaymentMethod)
+            .Include(t => t!.FaxInfo)
+            .FirstAsync(p => p!.Id == id);
     }
 
     public Contract? Add(Contract? contract)
