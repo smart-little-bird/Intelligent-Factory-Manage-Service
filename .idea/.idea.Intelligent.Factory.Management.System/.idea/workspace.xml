@@ -6,14 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d4f95a-acc9-40f4-9722-16aedeba19a4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/888e9cf5-b910-4c6a-96e9-3fcf6efc4f7e.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/MediatorModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/MediatorModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractListDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractListDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ContractRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/ContractRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Program.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +98,8 @@
       <workItem from="1694527002758" duration="685000" />
       <workItem from="1694527753352" duration="1137000" />
       <workItem from="1696399575807" duration="22784000" />
-      <workItem from="1698323503649" duration="2055000" />
+      <workItem from="1698323503649" duration="3977000" />
+      <workItem from="1698592970790" duration="1130000" />
     </task>
     <servers />
   </component>
@@ -290,10 +285,10 @@
           <line>12</line>
           <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\DTOs\ProductListDto.cs" initialLine="12" containingFunctionPresentation="constructor 'ProductPageDto'">
             <startOffsets>
-              <option value="306" />
+              <option value="307" />
             </startOffsets>
             <endOffsets>
-              <option value="340" />
+              <option value="341" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />

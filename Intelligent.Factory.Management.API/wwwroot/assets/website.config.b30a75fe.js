@@ -1,0 +1,1 @@
+const u="/assets/logo.34f8e312.png",e=Object.freeze({title:"\u667A\u6167\u5DE5\u5382\u7BA1\u7406\u7CFB\u7EDF",logo:u,loginImage:u,loginDesc:"\u667A\u6167\u5DE5\u5382\u7BA1\u7406\u7CFB\u7EDF"});export{e as w};
