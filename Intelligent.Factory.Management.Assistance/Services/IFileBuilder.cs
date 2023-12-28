@@ -1,6 +1,6 @@
 
 
-namespace Intelligent.Factory.Management.API.Services;
+namespace Intelligent.Factory.Management.Assistance.Services;
 
 public interface IFileBuilder
 {

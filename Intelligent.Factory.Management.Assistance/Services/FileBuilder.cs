@@ -1,5 +1,4 @@
 using System.Globalization;
-using Intelligent.Factory.Management.API.Services;
 using PdfSharpCore.Drawing;
 using PdfSharpCore.Fonts;
 using PdfSharpCore.Pdf;
