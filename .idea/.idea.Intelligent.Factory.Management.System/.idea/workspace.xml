@@ -6,8 +6,160 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d4f95a-acc9-40f4-9722-16aedeba19a4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/github-actions-demo.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/github-actions-demo.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateProductCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateProductCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteClientCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteClientCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Intelligent.Factory.Management.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Intelligent.Factory.Management.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20230925155511_Init_context.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20230925155511_Init_context.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20231007140835_contract_context.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20231007140835_contract_context.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20231008150933_contract_faxContext.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20231008150933_contract_faxContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20231011152624_contract_status.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/20231011152624_contract_status.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/IntelligentFactoryManagementContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/app.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/403.03ef0da1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/403.27f4c96c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/403.2baacba5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/404.086c332e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/404.3aed2a8d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/404.c1895555.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/500.b73c84a6.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/500.d5ae2db9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/500.ef1dc4e8.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/BasicForm.0b760792.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/BasicForm.af25b619.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/BasicSetting.613ada70.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/BasicSetting.f14e089d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/BasicSetting.vue_vue_type_script_setup_true_lang.b2a30507.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/BasicUpload.34ea5710.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/BasicUpload.50f4769e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/Business.86d9ca77.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/CreateDrawer.3a97bac8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/DeleteOutlined.c82a0970.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/DownOutlined.2ffc076e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/EmailSetting.250e43b9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/FluxTrend.fe74998e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/FormOutlined.a8df660c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/GithubOutlined.50c62903.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/PlusCircleOutlined.30826cdf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/PlusOutlined.f00db73b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/ReloadOutlined.8b3017bd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/RevealSetting.bb1d2f82.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/SafetySetting.2771bacd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/SearchOutlined.bb52e161.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/SettingOutlined.8ddd14cb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/Step1.ef7b30f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/Step1.vue_vue_type_script_setup_true_lang.a7ea9ae7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/Step2.248a01fa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/Step2.vue_vue_type_script_setup_true_lang.7e60aa13.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/Step3.49f02008.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/Step3.9076c94f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/TableAction.095fc665.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/TableAction.c2e71baa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/TableAction.vue_vue_type_script_lang.3072adbb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/VisiTab.c9a68cd2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/VisitAmount.c57e8543.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/account.1fbdba6d.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/account.86d34937.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/basic.5286b27b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/basic.5525ebab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/basic.973bdc5e.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/componentSetting.e6bd74f7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/console.3b6b8975.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/contract-item-form.b0482372.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/contract-item-form.vue_vue_type_script_setup_true_lang.781f4f26.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/create.5b857610.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/create.65cf9f2a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/datas.461faea1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/datas.92d65864.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/datas.93f51761.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/docs.208f65b5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/editCell.7530dace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/editRow.cff98314.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/fail.23c0c736.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/fail.e6b33ed7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/header-theme-dark.8888858c.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.05a316ce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.2944eb16.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.35df64ca.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.3a90fbfc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.4025cc6d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.43632524.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.553d0cb7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.5633de87.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.59a4ca56.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.65a1a773.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.6fd6125a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.74559b90.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.88a710bb.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.8bd93700.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.9301a26e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.96178e6a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.9990e784.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.9b095fa3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.aae0d008.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.b25f2df3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.b59a68b9.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.c577b149.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.ca860b53.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.d9413309.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.db7ff378.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.e1213847.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.ebc18e7f.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.f46d8740.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.f65e91d2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/index.fa00ed77.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.077c1954.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.4b801243.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.4be07add.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.5628cac4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.6bada334.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.e531bb5f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.vue_vue_type_script_setup_true_lang.66820bed.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.vue_vue_type_script_setup_true_lang.a06e641e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/info.vue_vue_type_script_setup_true_lang.f80a536f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/list.65ddd744.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/login.cddc8bc7.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/logo.34f8e312.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/menu.feb33004.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/monitor.dddc5a0e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/nav-horizontal-mix.9e0e93c3.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/nav-horizontal.683b0d6b.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/nav-theme-dark.8139308e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/nav-theme-light.c3c84088.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/parentLayout.068942ce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/product-item-form.662e1cef.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/product-item-form.vue_vue_type_script_setup_true_lang.86682521.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/propTypes.950ac77d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/props.86ae01cb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/role.56d10d63.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/schoolboy.9f04cdf7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/stepForm.4ff21f63.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/stepForm.caa3bff8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/success.1a485be9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/success.2781ede0.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/system.908f80ed.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/system.beaadb2a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/use-theme-vars.bac54ed4.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/useDesignSetting.5aac35a0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/useForm.00b2c3d3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/useForm.1999a2fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/useForm.68a13649.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/vue-quill.4a2ff794.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/vue-quill.4cce10a4.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/vuedraggable.umd.9403b4da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/website.config.b30a75fe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/workplace.38d8cb7c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/assets/workplace.696049fc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/index.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +187,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea9458842aad47e8a05443837c438552a24ab0/e4/480e0a21/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea9458842aad47e8a05443837c438552a24ab0/ea/d5ade092/ManualResetValueTaskSourceCore`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ea9f7acac59148ce98ab9db98c368a341cbaa0/8a/15e58f56/ActionMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2d7a56375724be49d12d4d94d02e9bfa24ea0/0d/4142df2f/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f2d7a56375724be49d12d4d94d02e9bfa24ea0/4f/1270e384/Monitor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b0a087584c3b944cc5fe4185941a322f52280cb673428408a806ce339bbd1c2/MapperConfigurationExpression.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ContractDetailDto.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -100,6 +255,7 @@
       <workItem from="1696399575807" duration="22784000" />
       <workItem from="1698323503649" duration="3977000" />
       <workItem from="1698592970790" duration="1130000" />
+      <workItem from="1711544632021" duration="9785000" />
     </task>
     <servers />
   </component>
@@ -292,6 +448,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Controllers\ProductController.cs" initialLine="28" containingFunctionPresentation="method 'CreateAsync'">
+            <startOffsets>
+              <option value="1050" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1106" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

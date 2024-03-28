@@ -6,20 +6,19 @@ namespace Intelligent.Factory.Management.API.Applications.Commands;
 
 public class CreateProductCommand : IRequest<int>
 {
-    public CreateProductCommand(string description, string entryCriteria, IEnumerable<ProductItemDto> productItemDtos)
+    public CreateProductCommand(string description, string entryCriteria, IEnumerable<ProductItemDto> productListItemDtos)
     {
         Description = description;
         EntryCriteria = entryCriteria;
-        ProductItemDtos = productItemDtos;
+        ProductListItemDtos = productListItemDtos;
     }
 
     public string Description { get; set; }
 
     public string EntryCriteria { get; set; }
 
-    public IEnumerable<ProductItemDto> ProductItemDtos { get; set; }
-
-
+    public IEnumerable<ProductItemDto> ProductListItemDtos { get; set; }
+    
 }
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>
@@ -34,7 +33,7 @@ public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand,
     public async Task<int> Handle(CreateProductCommand request, CancellationToken cancellationToken)
     {
         var product = new Product(request.Description, request.EntryCriteria);
-        foreach (var productItemDto in request.ProductItemDtos)
+        foreach (var productItemDto in request.ProductListItemDtos)
         {
             product.AddProductItem(productItemDto.ProductType, productItemDto.Name, productItemDto.Specifications, productItemDto.Amount, productItemDto.UnitPrice, productItemDto.Unit, productItemDto.Material, productItemDto.TechnicalRequirements, productItemDto.Remark);
         }

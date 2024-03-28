@@ -6,6 +6,7 @@ namespace Intelligent.Factory.Management.API.Applications.Commands;
 public class DeleteClientCommand : IRequest
 {
     public int Id { get; set; }
+    
 }
 
 public class DeleteClientCommandHandler : IRequestHandler<DeleteClientCommand>
