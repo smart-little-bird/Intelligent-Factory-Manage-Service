@@ -7,16 +7,17 @@ namespace Intelligent.Factory.Management.API.Applications.Commands;
 
 public class CreateContractCommand : IRequest<int>
 {
-    public CreateContractCommand(bool isCombineFax)
+    public CreateContractCommand()
     {
-        IsCombineFax = isCombineFax;
     }
 
-    public CreateContractCommand(int clientId, bool isCombineFax) : this(isCombineFax)
+    public CreateContractCommand(int clientId, bool isCombineFax,IEnumerable<ContractItemDto> contractItems,ContractPayMethodDto contractPayMethod,ContractShippingInfoDto contractShippingInfo) : this()
     {
         ClientId = clientId;
         IsCombineFax = isCombineFax;
-        ContractItems = new List<ContractItemDto>();
+        ContractItems = contractItems;
+        ContractShippingInfo = contractShippingInfo;
+        ContractPayMethod = contractPayMethod;
     }
 
     public int ClientId { get; set; }
@@ -32,22 +33,58 @@ public class CreateContractCommand : IRequest<int>
 
     public record ContractShippingInfoDto
     {
-        public DateTime ShipDateTime { get; init; }
+        public ContractShippingInfoDto()
+        {
+        }
 
-        public string ShipType { get; init; }
+        public ContractShippingInfoDto(string shipDateTime, string shipType, string logisticsUndertaker):this()
+        {
+            ShipDateTime = shipDateTime;
+            ShipType = shipType;
+            LogisticsUndertaker = logisticsUndertaker;
+        }
 
-        public string LogisticsUndertaker { get; init; }
+        public String ShipDateTime { get; set; }
+
+        public string ShipType { get; set; }
+
+        public string LogisticsUndertaker { get; set; }
     }
 
     public record ContractPayMethodDto
     {
-        public PaymentType PaymentType { get; init; }
+        public ContractPayMethodDto()
+        {
+        }
 
-        public List<int>? PayPercents { get; init; }
+        public ContractPayMethodDto(PaymentType paymentType, List<int>? payPercents) : this()
+        {
+            PayPercents = payPercents;
+            PaymentType = paymentType;
+        }
+
+        public PaymentType PaymentType { get; set; }
+
+        public List<int>? PayPercents { get; set; }
     }
 
     public record ContractItemDto
     {
+        public ContractItemDto()
+        {
+        }
+
+        public ContractItemDto(string productName, string material, string unit, int unitPrice, int amount, bool isIndependent, int productId):this()
+        {
+            ProductName = productName;
+            Material = material;
+            Unit = unit;
+            UnitPrice = unitPrice;
+            Amount = amount;
+            IsIndependent = isIndependent;
+            ProductId = productId;
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -109,7 +146,7 @@ public class CreateContractCommandHandler : IRequestHandler<CreateContractComman
             client.Address.City, client.Address.Province);
 
         contract.DeterminePaymentMethod(request.ContractPayMethod.PaymentType, request.ContractPayMethod.PayPercents);
-        contract.InitLogisticsInfo(request.ContractShippingInfo.ShipDateTime, request.ContractShippingInfo.ShipType,
+        contract.InitLogisticsInfo(Convert.ToDateTime(request.ContractShippingInfo.ShipDateTime), request.ContractShippingInfo.ShipType,
             request.ContractShippingInfo.LogisticsUndertaker);
         contract.AddFaxContext(request.IsCombineFax);
         foreach (var itemDto in request.ContractItems)

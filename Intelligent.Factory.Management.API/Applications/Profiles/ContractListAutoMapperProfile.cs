@@ -13,6 +13,6 @@ public class ContractListAutoMapperProfile : AutoMapper.Profile
             .ForMember(d => d.ClientName, o => o.MapFrom(s => s.ClientName))
             .ForMember(d => d.ShipType, o => o.MapFrom(s => s.LogisticsInfo.ShipType))
             .ForMember(d => d.ShipDateTime, o => o.MapFrom(s => s.LogisticsInfo.ShipDateTime))
-            .ForMember(d => d.TotalPrice, o => o.MapFrom(s => (s.FaxInfo.TaxRate + 1) * s.ContractContexts.Sum(t => t.UnitPrice * t.Amount)));
+            .ForMember(d => d.TotalPrice, o => o.MapFrom(s => (s.FaxInfo.TaxRate + 100) * s.ContractContexts.Sum(t => t.UnitPrice * t.Amount)/100));
     }
 }
