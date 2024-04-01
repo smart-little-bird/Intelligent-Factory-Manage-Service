@@ -11,7 +11,7 @@ public class CreateContractCommand : IRequest<int>
     {
     }
 
-    public CreateContractCommand(int clientId, bool isCombineFax,IEnumerable<ContractItemDto> contractItems,ContractPayMethodDto contractPayMethod,ContractShippingInfoDto contractShippingInfo) : this()
+    public CreateContractCommand(int clientId, bool isCombineFax, IEnumerable<ContractItemDto> contractItems, ContractPayMethodDto contractPayMethod, ContractShippingInfoDto contractShippingInfo) : this()
     {
         ClientId = clientId;
         IsCombineFax = isCombineFax;
@@ -37,7 +37,7 @@ public class CreateContractCommand : IRequest<int>
         {
         }
 
-        public ContractShippingInfoDto(string shipDateTime, string shipType, string logisticsUndertaker):this()
+        public ContractShippingInfoDto(string shipDateTime, string shipType, string logisticsUndertaker) : this()
         {
             ShipDateTime = shipDateTime;
             ShipType = shipType;
@@ -74,7 +74,7 @@ public class CreateContractCommand : IRequest<int>
         {
         }
 
-        public ContractItemDto(string productName, string material, string unit, int unitPrice, int amount, bool isIndependent, int productId):this()
+        public ContractItemDto(string productName, string material, string unit, int unitPrice, int amount, bool isIndependent, int productId) : this()
         {
             ProductName = productName;
             Material = material;

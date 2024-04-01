@@ -16847,7 +16847,7 @@ varchar</ExtendedProperties>
       <ObjectId>2</ObjectId>
     </schema>
     <schema id="5563" parent="5510" name="intelligent_factory_management">
-      <IntrospectionTimestamp>2024-03-28.21:56:08.860</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2024-03-31.21:17:49.507</IntrospectionTimestamp>
       <ObjectId>5</ObjectId>
     </schema>
     <schema id="5564" parent="5510" name="sys">
@@ -16873,93 +16873,98 @@ varchar</ExtendedProperties>
       <ModifiedTimestamp>2024-03-28.21:55:34.213</ModifiedTimestamp>
       <ObjectId>1061578820</ObjectId>
     </table>
-    <table id="5569" parent="5563" name="product">
+    <table id="5569" parent="5563" name="employee">
+      <CreatedTimestamp>2024-03-31.21:17:33.390</CreatedTimestamp>
+      <ModifiedTimestamp>2024-03-31.21:17:33.390</ModifiedTimestamp>
+      <ObjectId>1157579162</ObjectId>
+    </table>
+    <table id="5570" parent="5563" name="product">
       <CreatedTimestamp>2024-03-28.21:55:34.203</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.210</ModifiedTimestamp>
       <ObjectId>981578535</ObjectId>
     </table>
-    <table id="5570" parent="5563" name="productItem">
+    <table id="5571" parent="5563" name="productItem">
       <CreatedTimestamp>2024-03-28.21:55:34.210</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.213</ModifiedTimestamp>
       <ObjectId>1109578991</ObjectId>
     </table>
-    <column id="5571" parent="5565" name="Id">
+    <column id="5572" parent="5565" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(2)</SequenceIdentity>
     </column>
-    <column id="5572" parent="5565" name="ClientType">
+    <column id="5573" parent="5565" name="ClientType">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5573" parent="5565" name="Name">
+    <column id="5574" parent="5565" name="Name">
       <DasType>nvarchar(200 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5574" parent="5565" name="Street">
+    <column id="5575" parent="5565" name="Street">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5575" parent="5565" name="City">
+    <column id="5576" parent="5565" name="City">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5576" parent="5565" name="Province">
+    <column id="5577" parent="5565" name="Province">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5577" parent="5565" name="ZipCode">
+    <column id="5578" parent="5565" name="ZipCode">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5578" parent="5565" name="ClientAgentId">
+    <column id="5579" parent="5565" name="ClientAgentId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5579" parent="5565" name="TFN">
+    <column id="5580" parent="5565" name="TFN">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5580" parent="5565" name="BankTitle">
+    <column id="5581" parent="5565" name="BankTitle">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="5581" parent="5565" name="BankAccount">
+    <column id="5582" parent="5565" name="BankAccount">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="5582" parent="5565" name="BillingTelephone">
+    <column id="5583" parent="5565" name="BillingTelephone">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="5583" parent="5565" name="ContactNumber">
+    <column id="5584" parent="5565" name="ContactNumber">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
-    <column id="5584" parent="5565" name="Email">
+    <column id="5585" parent="5565" name="Email">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>14</Position>
     </column>
-    <column id="5585" parent="5565" name="Fax">
+    <column id="5586" parent="5565" name="Fax">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>15</Position>
     </column>
-    <foreign-key id="5586" parent="5565" name="FK_client_clientAgent_ClientAgentId">
+    <foreign-key id="5587" parent="5565" name="FK_client_clientAgent_ClientAgentId">
       <ColNames>ClientAgentId</ColNames>
       <CreatedTimestamp>2024-03-28.21:55:34.207</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.207</ModifiedTimestamp>
@@ -16969,178 +16974,178 @@ varchar</ExtendedProperties>
       <RefTableId>917578307</RefTableId>
       <RefTableName>clientAgent</RefTableName>
     </foreign-key>
-    <index id="5587" parent="5565" name="PK_client">
+    <index id="5588" parent="5565" name="PK_client">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5588" parent="5565" name="IX_client_ClientAgentId">
+    <index id="5589" parent="5565" name="IX_client_ClientAgentId">
       <ColNames>ClientAgentId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5589" parent="5565" name="PK_client">
+    <key id="5590" parent="5565" name="PK_client">
       <CreatedTimestamp>2024-03-28.21:55:34.207</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.207</ModifiedTimestamp>
       <ObjectId>1029578706</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_client</UnderlyingIndexName>
     </key>
-    <column id="5590" parent="5566" name="Id">
+    <column id="5591" parent="5566" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(2)</SequenceIdentity>
     </column>
-    <column id="5591" parent="5566" name="Name">
+    <column id="5592" parent="5566" name="Name">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5592" parent="5566" name="PhoneNumber">
+    <column id="5593" parent="5566" name="PhoneNumber">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="5593" parent="5566" name="PK_clientAgent">
+    <index id="5594" parent="5566" name="PK_clientAgent">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5594" parent="5566" name="PK_clientAgent">
+    <key id="5595" parent="5566" name="PK_clientAgent">
       <CreatedTimestamp>2024-03-28.21:55:34.200</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.200</ModifiedTimestamp>
       <ObjectId>933578364</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_clientAgent</UnderlyingIndexName>
     </key>
-    <column id="5595" parent="5567" name="Id">
+    <column id="5596" parent="5567" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(5)</SequenceIdentity>
     </column>
-    <column id="5596" parent="5567" name="ContractStatus">
+    <column id="5597" parent="5567" name="ContractStatus">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5597" parent="5567" name="ContractNo">
+    <column id="5598" parent="5567" name="ContractNo">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5598" parent="5567" name="ClientId">
+    <column id="5599" parent="5567" name="ClientId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5599" parent="5567" name="ClientName">
+    <column id="5600" parent="5567" name="ClientName">
       <DasType>nvarchar(200 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5600" parent="5567" name="Phone">
+    <column id="5601" parent="5567" name="Phone">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5601" parent="5567" name="PaymentType">
+    <column id="5602" parent="5567" name="PaymentType">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5602" parent="5567" name="PayPercent">
+    <column id="5603" parent="5567" name="PayPercent">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5603" parent="5567" name="ShipDateTime">
+    <column id="5604" parent="5567" name="ShipDateTime">
       <DasType>datetime2|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5604" parent="5567" name="ShipType">
+    <column id="5605" parent="5567" name="ShipType">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="5605" parent="5567" name="LogisticsUndertaker">
+    <column id="5606" parent="5567" name="LogisticsUndertaker">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <column id="5606" parent="5567" name="IsCombineFax">
+    <column id="5607" parent="5567" name="IsCombineFax">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>12</Position>
     </column>
-    <column id="5607" parent="5567" name="TaxRate">
+    <column id="5608" parent="5567" name="TaxRate">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>13</Position>
     </column>
-    <index id="5608" parent="5567" name="PK_contract">
+    <index id="5609" parent="5567" name="PK_contract">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5609" parent="5567" name="PK_contract">
+    <key id="5610" parent="5567" name="PK_contract">
       <CreatedTimestamp>2024-03-28.21:55:34.203</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.203</ModifiedTimestamp>
       <ObjectId>965578478</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_contract</UnderlyingIndexName>
     </key>
-    <column id="5610" parent="5568" name="Id">
+    <column id="5611" parent="5568" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(7)</SequenceIdentity>
     </column>
-    <column id="5611" parent="5568" name="ProductName">
+    <column id="5612" parent="5568" name="ProductName">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5612" parent="5568" name="IsIndependent">
+    <column id="5613" parent="5568" name="IsIndependent">
       <DasType>bit|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5613" parent="5568" name="ProductId">
+    <column id="5614" parent="5568" name="ProductId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5614" parent="5568" name="Material">
+    <column id="5615" parent="5568" name="Material">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5615" parent="5568" name="Unit">
+    <column id="5616" parent="5568" name="Unit">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5616" parent="5568" name="UnitPrice">
+    <column id="5617" parent="5568" name="UnitPrice">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5617" parent="5568" name="Amount">
+    <column id="5618" parent="5568" name="Amount">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5618" parent="5568" name="ContractId">
+    <column id="5619" parent="5568" name="ContractId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <foreign-key id="5619" parent="5568" name="FK_contractContext_contract_ContractId">
+    <foreign-key id="5620" parent="5568" name="FK_contractContext_contract_ContractId">
       <ColNames>ContractId</ColNames>
       <CreatedTimestamp>2024-03-28.21:55:34.210</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.210</ModifiedTimestamp>
@@ -17150,109 +17155,163 @@ varchar</ExtendedProperties>
       <RefTableId>949578421</RefTableId>
       <RefTableName>contract</RefTableName>
     </foreign-key>
-    <index id="5620" parent="5568" name="PK_contractContext">
+    <index id="5621" parent="5568" name="PK_contractContext">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5621" parent="5568" name="IX_contractContext_ContractId">
+    <index id="5622" parent="5568" name="IX_contractContext_ContractId">
       <ColNames>ContractId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5622" parent="5568" name="PK_contractContext">
+    <key id="5623" parent="5568" name="PK_contractContext">
       <CreatedTimestamp>2024-03-28.21:55:34.210</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.210</ModifiedTimestamp>
       <ObjectId>1077578877</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_contractContext</UnderlyingIndexName>
     </key>
-    <column id="5623" parent="5569" name="Id">
+    <column id="5624" parent="5569" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="5624" parent="5569" name="Description">
-      <DasType>nvarchar(max)|0s</DasType>
+    <column id="5625" parent="5569" name="EmployeeName">
+      <DasType>nvarchar(10 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5625" parent="5569" name="EntryCriteria">
+    <column id="5626" parent="5569" name="Gender">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <index id="5626" parent="5569" name="PK_product">
+    <column id="5627" parent="5569" name="Age">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="5628" parent="5569" name="Phone">
+      <DasType>nvarchar(max)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="5629" parent="5569" name="IdCardNo">
+      <DasType>nvarchar(max)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="5630" parent="5569" name="EmployeeType">
+      <DasType>nvarchar(max)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="5631" parent="5569" name="WorkingYear">
+      <DasType>float|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <index id="5632" parent="5569" name="PK_employee">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <key id="5627" parent="5569" name="PK_product">
+    <key id="5633" parent="5569" name="PK_employee">
+      <CreatedTimestamp>2024-03-31.21:17:33.420</CreatedTimestamp>
+      <ModifiedTimestamp>2024-03-31.21:17:33.420</ModifiedTimestamp>
+      <ObjectId>1173579219</ObjectId>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PK_employee</UnderlyingIndexName>
+    </key>
+    <column id="5634" parent="5570" name="Id">
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <SequenceIdentity>1(2)</SequenceIdentity>
+    </column>
+    <column id="5635" parent="5570" name="Description">
+      <DasType>nvarchar(max)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="5636" parent="5570" name="EntryCriteria">
+      <DasType>nvarchar(max)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <index id="5637" parent="5570" name="PK_product">
+      <Clustering>1</Clustering>
+      <ColNames>Id</ColNames>
+      <Position>1</Position>
+      <Unique>1</Unique>
+    </index>
+    <key id="5638" parent="5570" name="PK_product">
       <CreatedTimestamp>2024-03-28.21:55:34.203</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.203</ModifiedTimestamp>
       <ObjectId>997578592</ObjectId>
       <Primary>1</Primary>
       <UnderlyingIndexName>PK_product</UnderlyingIndexName>
     </key>
-    <column id="5628" parent="5570" name="Id">
+    <column id="5639" parent="5571" name="Id">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
+      <SequenceIdentity>1(2)</SequenceIdentity>
     </column>
-    <column id="5629" parent="5570" name="ProductType">
+    <column id="5640" parent="5571" name="ProductType">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="5630" parent="5570" name="Name">
+    <column id="5641" parent="5571" name="Name">
       <DasType>nvarchar(40 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="5631" parent="5570" name="Specifications">
+    <column id="5642" parent="5571" name="Specifications">
       <DasType>nvarchar(100 char)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="5632" parent="5570" name="Amount">
+    <column id="5643" parent="5571" name="Amount">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="5633" parent="5570" name="UnitPrice">
+    <column id="5644" parent="5571" name="UnitPrice">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="5634" parent="5570" name="Unit">
+    <column id="5645" parent="5571" name="Unit">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="5635" parent="5570" name="Material">
+    <column id="5646" parent="5571" name="Material">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>8</Position>
     </column>
-    <column id="5636" parent="5570" name="TechnicalRequirements">
+    <column id="5647" parent="5571" name="TechnicalRequirements">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>9</Position>
     </column>
-    <column id="5637" parent="5570" name="Remark">
+    <column id="5648" parent="5571" name="Remark">
       <DasType>nvarchar(max)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>10</Position>
     </column>
-    <column id="5638" parent="5570" name="ProductId">
+    <column id="5649" parent="5571" name="ProductId">
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>
       <Position>11</Position>
     </column>
-    <foreign-key id="5639" parent="5570" name="FK_productItem_product_ProductId">
+    <foreign-key id="5650" parent="5571" name="FK_productItem_product_ProductId">
       <ColNames>ProductId</ColNames>
       <CreatedTimestamp>2024-03-28.21:55:34.210</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.210</ModifiedTimestamp>
@@ -17262,17 +17321,17 @@ varchar</ExtendedProperties>
       <RefTableId>981578535</RefTableId>
       <RefTableName>product</RefTableName>
     </foreign-key>
-    <index id="5640" parent="5570" name="PK_productItem">
+    <index id="5651" parent="5571" name="PK_productItem">
       <Clustering>1</Clustering>
       <ColNames>Id</ColNames>
       <Position>1</Position>
       <Unique>1</Unique>
     </index>
-    <index id="5641" parent="5570" name="IX_productItem_ProductId">
+    <index id="5652" parent="5571" name="IX_productItem_ProductId">
       <ColNames>ProductId</ColNames>
       <Position>2</Position>
     </index>
-    <key id="5642" parent="5570" name="PK_productItem">
+    <key id="5653" parent="5571" name="PK_productItem">
       <CreatedTimestamp>2024-03-28.21:55:34.210</CreatedTimestamp>
       <ModifiedTimestamp>2024-03-28.21:55:34.210</ModifiedTimestamp>
       <ObjectId>1125579048</ObjectId>

@@ -18,7 +18,7 @@ public class CreateProductCommand : IRequest<int>
     public string EntryCriteria { get; set; }
 
     public IEnumerable<ProductItemDto> ProductListItemDtos { get; set; }
-    
+
 }
 
 public class CreateProductCommandHandler : IRequestHandler<CreateProductCommand, int>

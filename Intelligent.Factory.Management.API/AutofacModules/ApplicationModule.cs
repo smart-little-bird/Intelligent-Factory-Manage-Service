@@ -3,13 +3,14 @@ using Autofac;
 using Intelligent.Factory.Management.API.Applications.Queries;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ClientAggregate;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ContractAggregate;
+using Intelligent.Factory.Management.Domain.AggregatesModel.EmployeeAggregate;
 using Intelligent.Factory.Management.Domain.AggregatesModel.ProductAggregate;
 using Intelligent.Factory.Management.Infrastructure.Repositories;
 
 namespace Intelligent.Factory.Management.API.AutofacModules;
 
 public class ApplicationModule
-    : Autofac.Module
+    : Module
 {
     private string QueriesConnectionString { get; }
 
@@ -35,6 +36,10 @@ public class ApplicationModule
         builder.RegisterType<ContractQueries>()
             .As<IContractQueries>()
             .InstancePerLifetimeScope();
+        
+        builder.RegisterType<EmployeeQueries>()
+            .As<IEmployeeQueries>()
+            .InstancePerLifetimeScope();
 
         builder.RegisterType<ProductRepository>()
             .As<IProductRepository>()
@@ -43,6 +48,11 @@ public class ApplicationModule
         builder.RegisterType<ContractRepository>()
             .As<IContractRepository>()
             .InstancePerLifetimeScope();
+        
+        builder.RegisterType<EmployeeRepository>()
+            .As<IEmployeeRepository>()
+            .InstancePerLifetimeScope();
+        
 
     }
 }

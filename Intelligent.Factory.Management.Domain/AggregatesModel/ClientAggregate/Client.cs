@@ -97,5 +97,4 @@ public class Client : Entity, IAggregateRoot
         Email = email;
         Fax = fax;
     }
-
 }
