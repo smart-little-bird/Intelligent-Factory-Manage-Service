@@ -1,0 +1,1 @@
+import"./product-item-form.vue_vue_type_script_setup_true_lang.d38fc50a.js";import{_ as i}from"./product-item-form.vue_vue_type_script_setup_true_lang.d38fc50a.js";import"./datas.e73ec70c.js";import"./index.1bc0c441.js";export{i as default};

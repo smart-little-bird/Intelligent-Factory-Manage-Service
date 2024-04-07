@@ -170,6 +170,11 @@ namespace Intelligent.Factory.Management.API.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("nvarchar(10)");
 
+                    b.Property<DateTime>("EntryTime")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2024, 4, 7, 23, 20, 40, 884, DateTimeKind.Local).AddTicks(9854));
+
                     b.HasKey("Id");
 
                     b.ToTable("employee", "intelligent_factory_management");

@@ -18,6 +18,10 @@ public class EmployeeEntityTypeConfiguration : IEntityTypeConfiguration<Employee
             .HasMaxLength(10)
             .IsRequired();
         
+        builder.Property(b => b.EntryTime)
+            .HasDefaultValue(DateTime.Now)
+            .IsRequired();
+        
         builder
             .OwnsOne(o => o.BasicInfo, a =>
             {

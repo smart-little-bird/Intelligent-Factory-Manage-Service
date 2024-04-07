@@ -6,33 +6,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17d4f95a-acc9-40f4-9722-16aedeba19a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateEmployeeCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/EmployeeAutoMapperProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/EmployeeQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/IEmployeeQueries.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/EmployeeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/EmployeeListDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/EmployeeAggregate/BasicInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/EmployeeAggregate/Employee.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/EmployeeAggregate/IEmployeeRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/EmployeeAggregate/WorkingInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/EmployeeEntityTypeConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/Repositories/EmployeeRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/5094e391-ab0e-4ead-9b2d-db75a17ad1d1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/5094e391-ab0e-4ead-9b2d-db75a17ad1d1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/6ab8b62a-e6da-45c0-8919-279a7136b297/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/91565264-927f-4f4e-85dd-c59d95977029.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/f4d7734a-3fe8-4435-b283-e13d3064ad28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/f4d7734a-3fe8-4435-b283-e13d3064ad28/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/dataSources/5094e391-ab0e-4ead-9b2d-db75a17ad1d1/storage_v2/_src_/database/master.YiqNvw/schema/dbo.sYMBAA.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Intelligent.Factory.Management.System/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateContractCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateProductCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateProductCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteClientCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/DeleteClientCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ContractListAutoMapperProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Profiles/ContractListAutoMapperProfile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/AutofacModules/ApplicationModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateEmployeeCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Commands/CreateEmployeeCommand.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/IntelligentFactoryManagementContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/Migrations/IntelligentFactoryManagementContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ClientAggregate/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/ClientAggregate/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/IntelligentFactoryManagementContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/IntelligentFactoryManagementContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.API/wwwroot/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/EmployeeAggregate/Employee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Domain/AggregatesModel/EmployeeAggregate/Employee.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/EmployeeEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Intelligent.Factory.Management.Infrastructure/EntityConfigurations/EmployeeEntityTypeConfiguration.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +110,8 @@
       <workItem from="1698323503649" duration="3977000" />
       <workItem from="1698592970790" duration="1130000" />
       <workItem from="1711544632021" duration="9785000" />
-      <workItem from="1711892041364" duration="5880000" />
+      <workItem from="1711892041364" duration="9243000" />
+      <workItem from="1712237050409" duration="6752000" />
     </task>
     <servers />
   </component>
@@ -286,32 +267,6 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Applications/Queries/ProductQueries.cs</url>
-          <line>20</line>
-          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Applications\Queries\ProductQueries.cs" initialLine="20" containingFunctionPresentation="method 'GetProductListAsync'">
-            <startOffsets>
-              <option value="628" />
-            </startOffsets>
-            <endOffsets>
-              <option value="710" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/DTOs/ProductListDto.cs</url>
-          <line>12</line>
-          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\DTOs\ProductListDto.cs" initialLine="12" containingFunctionPresentation="constructor 'ProductPageDto'">
-            <startOffsets>
-              <option value="307" />
-            </startOffsets>
-            <endOffsets>
-              <option value="341" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs</url>
           <line>28</line>
           <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Controllers\ProductController.cs" initialLine="28" containingFunctionPresentation="method 'CreateAsync'">
@@ -323,6 +278,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Intelligent.Factory.Management.API/Controllers/ProductController.cs</url>
+          <line>49</line>
+          <properties documentPath="C:\Users\jzp93\Desktop\Intelligent-Factory-Manage-Service\Intelligent.Factory.Management.API\Controllers\ProductController.cs" initialLine="49" containingFunctionPresentation="method 'UpdateAsync'">
+            <startOffsets>
+              <option value="2045" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2101" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

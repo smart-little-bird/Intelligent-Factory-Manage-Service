@@ -6,6 +6,8 @@ public class Employee : Entity, IAggregateRoot
 {
     public string EmployeeName { get; set; }
 
+    public DateTime EntryTime { get; set; }
+    
     public BasicInfo BasicInfo { get; set; }
 
     public WorkingInfo WorkingInfo { get; set; }
@@ -15,9 +17,10 @@ public class Employee : Entity, IAggregateRoot
     {
     }
 
-    public Employee(string employeeName):this()
+    public Employee(string employeeName,DateTime entryTime):this()
     {
         this.EmployeeName = employeeName;
+        EntryTime = entryTime;
     }
 
     public void InitEmployeeBasicInfo(string gender,int age, string phone, string idCardNo)

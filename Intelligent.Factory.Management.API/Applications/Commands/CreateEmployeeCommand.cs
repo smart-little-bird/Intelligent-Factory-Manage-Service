@@ -3,6 +3,17 @@ using MediatR;
 
 namespace Intelligent.Factory.Management.API.Applications.Commands;
 
+public enum SkillType
+{
+    车削=0,
+    数控=1,
+    精工=2,
+    焊接=3, 
+    车铣=4,
+    刨磨=5,
+    质检=6
+}
+
 public class CreateEmployeeCommand : IRequest<int>
 {
     public CreateEmployeeCommand()
@@ -10,14 +21,17 @@ public class CreateEmployeeCommand : IRequest<int>
 
     }
 
-    public CreateEmployeeCommand(string gender, string employeeName, string employeeType, int age, string phone, string idCardNo, double workingYear) : this()
+    public CreateEmployeeCommand(string gender, string employeeName, string employeeType, int age, string phone, string idCardNo,
+        DateTime entryTime, double workingYear,IEnumerable<SkillType> skillTypes) : this()
     {
         EmployeeName = employeeName;
         EmployeeType = employeeType;
         Age = age;
+        EntryTime = entryTime;
         Phone = phone;
         IdCardNo = idCardNo;
         Gender = gender;
+        SkillTypes = skillTypes;
         WorkingYear = workingYear;
     }
 
@@ -28,6 +42,10 @@ public class CreateEmployeeCommand : IRequest<int>
     public string EmployeeType { get; set; }
 
     public int Age { get; set; }
+
+    public DateTime EntryTime { get; set; }
+
+    public IEnumerable<SkillType> SkillTypes { get; set; }
 
     public string Phone { get; set; }
 
@@ -48,7 +66,7 @@ public class CreateEmployeeCommandHandler : IRequestHandler<CreateEmployeeComman
 
     public async Task<int> Handle(CreateEmployeeCommand request, CancellationToken cancellationToken)
     {
-        var employee = new Employee(request.EmployeeName);
+        var employee = new Employee(request.EmployeeName,request.EntryTime);
         employee.InitEmployeeBasicInfo(request.Gender, request.Age, request.Phone, request.IdCardNo);
         employee.InitEmployeeWorkingInfo(request.EmployeeType, request.WorkingYear);
         var result = _employeeRepository.Add(employee);
